@@ -120,6 +120,17 @@ async function request(endpoint, options = {}) {
     }
 
     if (!response.ok) {
+      // If server returns an error (404, 500, 502, 503) on a GET request, seamlessly fall back to recorded fixtures
+      if (method === 'GET' && (response.status === 404 || response.status >= 500)) {
+        const fixture = getFixture(endpoint, options, state);
+        if (fixture !== null && fixture !== undefined) {
+          if (!previewManager.isActive()) {
+            previewManager.enable();
+          }
+          return fixture;
+        }
+      }
+
       let detail = `Request failed with status ${response.status}`;
       try {
         const errJson = await response.json();
@@ -142,8 +153,8 @@ async function request(endpoint, options = {}) {
     }
     return response;
   } catch (error) {
-    // If backend is unreachable and this is a GET request, fall back to preview mode
-    if (method === 'GET' && (error.name === 'TypeError' || error.message.includes('fetch') || error.message.includes('network'))) {
+    // If backend is unreachable or throws on a GET request, fall back to preview mode
+    if (method === 'GET') {
       const fixture = getFixture(endpoint, options, state);
       if (fixture !== null && fixture !== undefined) {
         if (!previewManager.isActive()) {

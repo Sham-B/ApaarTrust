@@ -51,3 +51,9 @@ desktop.ini
 *.log
 .vscode/
 .idea/
+
+# Browser temporary profiles, test outputs, and presentation notes
+chrome_tmp_profile/
+chrome_out.html
+scratch/
+presentation_guide.md

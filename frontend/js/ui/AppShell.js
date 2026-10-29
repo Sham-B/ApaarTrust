@@ -30,16 +30,26 @@ export function renderAppShell(arg1, arg2, arg3) {
   return getAppShellMarkup(contentHtml, breadcrumbItems);
 }
 
+export function getDefaultNav(role) {
+  return auth.getDefaultNav(role);
+}
+
+export function getDefaultPersona(role, instId = null) {
+  return auth.getDefaultPersona(role, instId);
+}
+
 function getAppShellMarkup(contentHtml, breadcrumbItems = []) {
   const safeBreadcrumbs = Array.isArray(breadcrumbItems) ? breadcrumbItems : [];
   const { role, persona, nav, theme, lang, notifications } = store.getState();
 
+  const activePersona = persona || auth.getDefaultPersona(role);
   const roleTitle = role === 'Officer' ? 'AICTE Officer' : role === 'Institution' ? 'College Registrar' : role === 'Student' ? 'Student' : 'Public Verifier';
-  const displayName = persona?.name || roleTitle;
-  const displaySub = persona?.department || persona?.institution_name || persona?.apaar_masked || 'Open Access';
-  const initials = persona?.initials || role?.slice(0, 2).toUpperCase() || 'AP';
+  const displayName = activePersona?.name || roleTitle;
+  const displaySub = activePersona?.department || activePersona?.institution_name || activePersona?.apaar_masked || 'Open Access';
+  const initials = activePersona?.initials || role?.slice(0, 2).toUpperCase() || 'AP';
 
   const currentHash = window.location.hash || auth.getRoleHome(role);
+  const navItems = (Array.isArray(nav) && nav.length > 0) ? nav : auth.getDefaultNav(role);
 
   return `
     <div class="app-shell">
@@ -55,7 +65,7 @@ function getAppShellMarkup(contentHtml, breadcrumbItems = []) {
 
         <nav class="sidebar-nav-container" aria-label="Portal Navigation">
           <ul class="sidebar-nav-list">
-            ${nav
+            ${navItems
               .map((item) => {
                 const isActive = currentHash.startsWith(item.href);
                 return `

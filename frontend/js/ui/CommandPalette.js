@@ -4,6 +4,7 @@
  */
 
 import { store } from '../store.js';
+import { auth } from '../auth.js';
 import { iconHtml } from './icons.js';
 
 export class CommandPalette {
@@ -33,9 +34,10 @@ export class CommandPalette {
   getItems() {
     const { role, nav } = store.getState();
     const items = [];
+    const navItems = (Array.isArray(nav) && nav.length > 0) ? nav : auth.getDefaultNav(role);
 
     // Navigation links from role
-    nav.forEach((n) => {
+    navItems.forEach((n) => {
       items.push({
         type: 'Navigation',
         title: `Go to ${n.title}`,
