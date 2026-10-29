@@ -1,0 +1,92 @@
+{
+  "months": [
+    "Nov",
+    "Dec",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct"
+  ],
+  "institutions_reporting": {
+    "current": 5,
+    "change_pct": "+25%",
+    "trend": "up",
+    "series": [
+      2,
+      2,
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5,
+      5
+    ]
+  },
+  "students_verified": {
+    "current": 1201,
+    "change_pct": "+18%",
+    "trend": "up",
+    "series": [
+      180,
+      310,
+      480,
+      620,
+      750,
+      890,
+      980,
+      1050,
+      1110,
+      1160,
+      1185,
+      1201
+    ]
+  },
+  "open_findings": {
+    "current": 5,
+    "change_pct": "-42%",
+    "trend": "down",
+    "series": [
+      14,
+      12,
+      11,
+      10,
+      9,
+      8,
+      8,
+      7,
+      6,
+      6,
+      5,
+      5
+    ]
+  },
+  "over_intake_cases": {
+    "current": 1,
+    "change_pct": "-66%",
+    "trend": "down",
+    "series": [
+      3,
+      3,
+      2,
+      2,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  }
+}

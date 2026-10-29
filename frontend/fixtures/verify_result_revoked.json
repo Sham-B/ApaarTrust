@@ -1,0 +1,16 @@
+{
+  "status": "revoked",
+  "genuine": false,
+  "message": "Student digital consent for this credential has been revoked or withdrawn pursuant to DPDP consent principles.",
+  "consent_status": "REVOKED_BY_STUDENT",
+  "disclosed_fields": [],
+  "withheld_fields": [
+    "name",
+    "programme",
+    "institution",
+    "dob",
+    "admission_quota",
+    "social_category"
+  ],
+  "what_to_do_next": "Contact the candidate directly to request an active digital consent grant through the ApaarTrust Student Portal."
+}

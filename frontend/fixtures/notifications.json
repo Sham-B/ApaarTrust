@@ -1,0 +1,41 @@
+{
+  "unread_count": 2,
+  "items": [
+    {
+      "id": "notif_seed_off_1",
+      "role": "Officer",
+      "institution_id": "1-1090234567",
+      "student_token": null,
+      "type": "critical",
+      "title": "Over-intake Alert",
+      "message": "Bhaskara College exceeded sanctioned CSE intake by 8 students.",
+      "time": "12m ago",
+      "created_at": "2026-10-29T10:11:51.137419+00:00",
+      "unread": true
+    },
+    {
+      "id": "notif_seed_off_2",
+      "role": "Officer",
+      "institution_id": "1-1090123456",
+      "student_token": null,
+      "type": "warning",
+      "title": "Duplicate Enrolment",
+      "message": "Cross-institution collision flagged between Aryabhata and Chanakya.",
+      "time": "1h ago",
+      "created_at": "2026-10-29T10:11:51.137433+00:00",
+      "unread": true
+    },
+    {
+      "id": "notif_seed_off_3",
+      "role": "Officer",
+      "institution_id": null,
+      "student_token": null,
+      "type": "success",
+      "title": "Audit Chain Valid",
+      "message": "Automated verification confirmed cryptographic audit chain is unbroken.",
+      "time": "3h ago",
+      "created_at": "2026-10-29T10:11:51.137438+00:00",
+      "unread": false
+    }
+  ]
+}

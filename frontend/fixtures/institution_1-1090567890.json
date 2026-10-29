@@ -1,0 +1,169 @@
+{
+  "institution": {
+    "name": "Eklavya Engineering Academy",
+    "district": "Jaipur",
+    "aicte_pid": "1-1090567890",
+    "contact_email": "registrar@11090567890.edu.in",
+    "id": "1-1090567890",
+    "state": "Rajasthan",
+    "address": "Tonk Road, Sitapura Industrial Area, Jaipur, Rajasthan - 302022",
+    "created_at": "2026-10-28T06:46:56.019529Z"
+  },
+  "seat_matrices": [
+    {
+      "academic_year": "2024-25",
+      "id": 13,
+      "supernumerary_caps": {
+        "TFW": 6,
+        "EWS": 12,
+        "KM": 3,
+        "PMSSS": 2,
+        "NRI": 6,
+        "FN_OCI": 18
+      },
+      "approved_intake": 120,
+      "institution_id": "1-1090567890",
+      "programme": "B.Tech Computer Science and Engineering",
+      "created_at": "2026-10-28T06:46:56.038954Z"
+    },
+    {
+      "academic_year": "2024-25",
+      "id": 14,
+      "supernumerary_caps": {
+        "TFW": 3,
+        "EWS": 6,
+        "KM": 3,
+        "PMSSS": 2,
+        "NRI": 3,
+        "FN_OCI": 9
+      },
+      "approved_intake": 60,
+      "institution_id": "1-1090567890",
+      "programme": "B.Tech Electronics and Communication Engineering",
+      "created_at": "2026-10-28T06:46:56.039167Z"
+    },
+    {
+      "academic_year": "2024-25",
+      "id": 15,
+      "supernumerary_caps": {
+        "TFW": 3,
+        "EWS": 6,
+        "KM": 3,
+        "PMSSS": 2,
+        "NRI": 3,
+        "FN_OCI": 9
+      },
+      "approved_intake": 60,
+      "institution_id": "1-1090567890",
+      "programme": "B.Tech Mechanical Engineering",
+      "created_at": "2026-10-28T06:46:56.039358Z"
+    }
+  ],
+  "student_count": 220,
+  "findings": [
+    {
+      "student_record_id": null,
+      "id": 36,
+      "rule_id": "ANOMALY_DOB_CLUSTER",
+      "plain_reason": "Statistically abnormal cluster: 55+ students in this cohort have date of birth 01-Jan.",
+      "benign_hypotheses": [
+        {
+          "title": "Rural Birth Registration Convention",
+          "description": "Historically, candidates from rural school certificates had Jan 01 entered when exact date was unknown."
+        },
+        {
+          "title": "ERP Default Field Artifact",
+          "description": "Institutional database migration defaulted null birth dates to January 1st."
+        }
+      ],
+      "status": "open",
+      "institution_id": "1-1090567890",
+      "row_number": 1,
+      "submission_id": "sub_11090567890_2024_v1",
+      "severity": "medium",
+      "evidence": {
+        "date_cluster": "01-01",
+        "student_count": 58,
+        "concentration_percentage": 26.4
+      },
+      "fix_hint": "Cross-reference original matriculation certificate and update exact birth dates.",
+      "created_at": "2026-10-28T06:46:58.126250Z"
+    },
+    {
+      "student_record_id": null,
+      "id": 37,
+      "rule_id": "ANOMALY_NRI_FN_SPIKE",
+      "plain_reason": "High NRI/Foreign National quota concentration: 55 out of 220 students (25.0%) exceeds 15% norm.",
+      "benign_hypotheses": [
+        {
+          "title": "MEA / ICCR Scholarship Scheme",
+          "description": "Institution participates in Ministry of External Affairs Study in India program."
+        }
+      ],
+      "status": "open",
+      "institution_id": "1-1090567890",
+      "row_number": 2,
+      "submission_id": "sub_11090567890_2024_v1",
+      "severity": "medium",
+      "evidence": {
+        "nri_fn_count": 55,
+        "total_admitted": 220,
+        "percentage": 25,
+        "threshold_pct": 15
+      },
+      "fix_hint": "Attach AICTE international student approval endorsement memo.",
+      "created_at": "2026-10-28T06:46:58.126370Z"
+    },
+    {
+      "student_record_id": null,
+      "id": 38,
+      "rule_id": "CONSISTENCY_AGE_RANGE",
+      "plain_reason": "Student age at undergraduate admission (age 76 or age 5) is outside customary age norms.",
+      "benign_hypotheses": [
+        {
+          "title": "Birth Year Typo",
+          "description": "Year 1948 entered instead of 2004."
+        }
+      ],
+      "status": "open",
+      "institution_id": "1-1090567890",
+      "row_number": 1,
+      "submission_id": "sub_11090567890_2024_v1",
+      "severity": "low",
+      "evidence": {
+        "student_roll": "EEA-B.T-24-001",
+        "dob": "1948-03-10",
+        "calculated_age": 76
+      },
+      "fix_hint": "Check 10th marksheet for correct year of birth.",
+      "created_at": "2026-10-28T06:46:58.126492Z"
+    }
+  ],
+  "submissions": [
+    {
+      "version": 1,
+      "id": "sub_11090567890_2024_v1",
+      "filename": "1-1090567890_student_intake_2024.xlsx",
+      "valid_rows": 217,
+      "submission_hash": "hash_1-1090567890_v1",
+      "created_at": "2026-10-28T06:46:57.952092Z",
+      "held_by_officer": false,
+      "adverse_reason": null,
+      "action_timestamp": null,
+      "status": "committed",
+      "institution_id": "1-1090567890",
+      "academic_year": "2024-25",
+      "total_rows": 220,
+      "flagged_rows": 3,
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 2,
+        "low": 1
+      },
+      "committed_at": null,
+      "rejected_by_officer": false,
+      "officer_id": null
+    }
+  ]
+}

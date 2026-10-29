@@ -1,0 +1,193 @@
+[
+  {
+    "application_id": null,
+    "timestamp": "2026-10-28T06:47:00.220374Z",
+    "actor_role": "Student",
+    "payload": {
+      "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+      "purpose": "Public",
+      "allowed_fields": [
+        "name",
+        "programme"
+      ],
+      "grant_id": "cg_bf290ffed0fc"
+    },
+    "current_hash": "9bcd39a037bdd208efd9b07c7facd4006dbf21366fd27a73d19c7443f85e3f11",
+    "action": "STUDENT_CONSENT_GRANTED",
+    "id": 11,
+    "doc_id": null,
+    "prev_hash": "0d98dc093a38a9f71ee6155c39dbafa3b25f72795d7a37edf315b973c6a4e803"
+  },
+  {
+    "application_id": null,
+    "timestamp": "2026-10-28T06:47:00.004307Z",
+    "actor_role": "Student",
+    "payload": {
+      "grant_id": "cg_e4281ba8dfe4",
+      "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506"
+    },
+    "current_hash": "0d98dc093a38a9f71ee6155c39dbafa3b25f72795d7a37edf315b973c6a4e803",
+    "action": "STUDENT_CONSENT_REVOKED",
+    "id": 10,
+    "doc_id": null,
+    "prev_hash": "e41a23920bfa0a164d34d01d2c820b224aa40b4d80047446637aa52bf3e85d7a"
+  },
+  {
+    "application_id": null,
+    "timestamp": "2026-10-28T06:46:59.884879Z",
+    "actor_role": "Student",
+    "payload": {
+      "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+      "purpose": "Employment Verification",
+      "allowed_fields": [
+        "name",
+        "programme",
+        "institution"
+      ],
+      "grant_id": "cg_e4281ba8dfe4"
+    },
+    "current_hash": "e41a23920bfa0a164d34d01d2c820b224aa40b4d80047446637aa52bf3e85d7a",
+    "action": "STUDENT_CONSENT_GRANTED",
+    "id": 9,
+    "doc_id": null,
+    "prev_hash": "6be8a0ffdbc2bd48e39ef22ff270532a4c127b2bdd3f0cdf857ac233813c4162"
+  },
+  {
+    "application_id": "SYSTEM",
+    "timestamp": "2026-10-28T06:46:59.736211Z",
+    "actor_role": "Officer",
+    "payload": {
+      "restored_entries": 1,
+      "message": "Audit trail restored to valid cryptographic hash chain."
+    },
+    "current_hash": "6be8a0ffdbc2bd48e39ef22ff270532a4c127b2bdd3f0cdf857ac233813c4162",
+    "action": "AUDIT_CHAIN_RESTORED",
+    "id": 8,
+    "doc_id": null,
+    "prev_hash": "211f04f42c1d95c3fc801964cfc8312da5f9a5bc75bf3e3e652a8fc6dd713f69"
+  },
+  {
+    "application_id": "1-1090123456",
+    "timestamp": "2026-10-28T06:46:59.645867Z",
+    "actor_role": "Officer",
+    "payload": {
+      "student_name": "Rohan Aditya Sharma",
+      "student_roll": "AIT-CSE-24-001",
+      "institution_id": "1-1090123456",
+      "justification_reason": "Statutory regional committee verification order #9921",
+      "apaar_masked": "XXXX-XXXX-1100"
+    },
+    "current_hash": "211f04f42c1d95c3fc801964cfc8312da5f9a5bc75bf3e3e652a8fc6dd713f69",
+    "action": "CONFIDENTIAL_APAAR_ID_REVEALED",
+    "id": 7,
+    "doc_id": "1",
+    "prev_hash": "23dac0abba19e57bcc610fdbfcf97525aa0268f6f6f01e9ed48b8b0a80666fe4"
+  },
+  {
+    "application_id": "dup_01",
+    "timestamp": "2026-10-28T06:46:59.555905Z",
+    "actor_role": "Officer",
+    "payload": {
+      "case_id": "dup_01",
+      "decision": "needs_review",
+      "reason": "Referred to Joint Regional Scrutiny Board.",
+      "action_notes": null
+    },
+    "current_hash": "23dac0abba19e57bcc610fdbfcf97525aa0268f6f6f01e9ed48b8b0a80666fe4",
+    "action": "OFFICER_DUPLICATE_DECISION",
+    "id": 6,
+    "doc_id": null,
+    "prev_hash": "0e26720375e785f63016a8023745dc1d08618111d0e425313cf7a398e7d5b42a"
+  },
+  {
+    "application_id": "1-1090123456",
+    "timestamp": "2026-10-28T06:46:59.524186Z",
+    "actor_role": "Officer",
+    "payload": {
+      "submission_id": "sub_11090123456_2024_v1",
+      "action": "hold",
+      "reason": "Discrepancy in sanctioned CSE intake ceiling."
+    },
+    "current_hash": "0e26720375e785f63016a8023745dc1d08618111d0e425313cf7a398e7d5b42a",
+    "action": "OFFICER_ADVERSE_ACTION_HOLD",
+    "id": 5,
+    "doc_id": null,
+    "prev_hash": "7701092034fe0f37a6e5d9044b67a553c24b6d6092f15f2707a9352c0b24e1d1"
+  },
+  {
+    "application_id": "1-1090234567",
+    "timestamp": "2026-10-28T06:46:59.479331Z",
+    "actor_role": "Officer",
+    "payload": {
+      "finding_id": 1,
+      "rule_id": "SEAT_CAP_REGULAR",
+      "old_status": "in_review",
+      "new_status": "in_review",
+      "reason": "Please submit approved sanction order from State Directorate.",
+      "comment": null,
+      "request_clarification": true
+    },
+    "current_hash": "7701092034fe0f37a6e5d9044b67a553c24b6d6092f15f2707a9352c0b24e1d1",
+    "action": "FINDING_CLARIFICATION_REQUESTED",
+    "id": 4,
+    "doc_id": "1",
+    "prev_hash": "5b9f64f158c2f973ef8d803247d706545fc2427859ecf841e2633e7dcd11f493"
+  },
+  {
+    "application_id": "1-1090234567",
+    "timestamp": "2026-10-28T06:46:59.456137Z",
+    "actor_role": "Officer",
+    "payload": {
+      "finding_id": 1,
+      "rule_id": "SEAT_CAP_REGULAR",
+      "old_status": "open",
+      "new_status": "in_review",
+      "reason": "Dispatched inquiry notice to regional registrar.",
+      "comment": null,
+      "request_clarification": false
+    },
+    "current_hash": "5b9f64f158c2f973ef8d803247d706545fc2427859ecf841e2633e7dcd11f493",
+    "action": "FINDING_STATUS_UPDATED",
+    "id": 3,
+    "doc_id": "1",
+    "prev_hash": "558f5bf8b273eb7f64d61d484deb01d488ad0c24f7a3f1d4842f89c433793f4e"
+  },
+  {
+    "application_id": "1-1090123456",
+    "timestamp": "2026-10-28T06:46:58.458841Z",
+    "actor_role": "Institution",
+    "payload": {
+      "submission_id": "sub_11090123456_v2",
+      "version": 2,
+      "total_rows": 5,
+      "findings_count": 0,
+      "filename": "clean.csv"
+    },
+    "current_hash": "558f5bf8b273eb7f64d61d484deb01d488ad0c24f7a3f1d4842f89c433793f4e",
+    "action": "SUBMISSION_BATCH_COMMITTED",
+    "id": 2,
+    "doc_id": null,
+    "prev_hash": "9f89e08a71c8af75a62133cf764147b02e82083586051088dd3a3f1275fa2352"
+  },
+  {
+    "application_id": "AICTE_CENTRAL",
+    "timestamp": "2026-10-28T06:46:58.269897Z",
+    "actor_role": "System",
+    "payload": {
+      "institutions_seeded": 5,
+      "students_seeded": 1161,
+      "archetypes": [
+        "clean",
+        "over_intake",
+        "cross_duplicate",
+        "registry_mismatches",
+        "anomalies"
+      ]
+    },
+    "current_hash": "9f89e08a71c8af75a62133cf764147b02e82083586051088dd3a3f1275fa2352",
+    "action": "INITIAL_SEED_COMPLETE",
+    "id": 1,
+    "doc_id": null,
+    "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+  }
+]

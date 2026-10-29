@@ -1,0 +1,13 @@
+{
+  "status": "expired",
+  "genuine": false,
+  "message": "Credential validity window expired on 2024-06-30. Session credentials must be renewed annually.",
+  "disclosed_fields": [],
+  "withheld_fields": [
+    "name",
+    "programme",
+    "institution",
+    "dob"
+  ],
+  "what_to_do_next": "Request the candidate or issuing college registrar to issue an updated credential for the current academic session."
+}

@@ -1,0 +1,31 @@
+# ApaarTrust - Probabilistic Record Linkage and Duplicate Matching Weights
+# Per-field log-odds contribution weights for identity resolution
+
+weights:
+  apaar_token_exact:
+    weight: 10.0
+    description: "Deterministic match on HMAC-SHA256 APAAR identifier token"
+
+  dob_exact:
+    weight: 4.1
+    description: "Exact match on ISO YYYY-MM-DD Date of Birth"
+
+  name_similarity_scale:
+    max_weight: 3.5
+    min_threshold: 0.70
+    description: "RapidFuzz token-sort similarity score multiplied by scale factor (3.5)"
+
+  gender_concordance:
+    weight_match: 0.8
+    penalty_mismatch: -3.0
+    description: "Concordance between declared gender attributes"
+
+  social_category_concordance:
+    weight_match: 0.5
+    penalty_mismatch: -1.0
+    description: "Consistency across declared affirmative action category"
+
+thresholds:
+  definite_duplicate: 7.5
+  probable_duplicate: 5.0
+  review_threshold: 4.0

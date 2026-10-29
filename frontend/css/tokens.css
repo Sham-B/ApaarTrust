@@ -1,0 +1,187 @@
+/* ==========================================================================
+   ApaarTrust Design System: Design Tokens
+   Brand Colors: Navy, Saffron, Green, Red, Amber, Blue
+   Neutral Scale: Slate 50 to Slate 900
+   Grid: 4px base
+   ========================================================================== */
+
+:root {
+  /* Brand Primitives */
+  --navy: #14307a;
+  --navy-dark: #0a1b48;
+  --navy-light: #1e44a8;
+  --saffron: #e8731a;
+  --saffron-dark: #c25908;
+  --saffron-light: #fa8f3d;
+  --green: #138808;
+  --green-dark: #0d5e06;
+  --green-light: #20a812;
+  --red: #c62828;
+  --red-dark: #8e0000;
+  --red-light: #e53935;
+  --amber: #b26a00;
+  --amber-dark: #824d00;
+  --amber-light: #d98200;
+  --blue: #1565c0;
+  --blue-dark: #0d47a1;
+  --blue-light: #1976d2;
+
+  /* Neutral Slate Scale */
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  --slate-950: #020617;
+
+  /* Semantic Theme Variables (Light Theme Default) */
+  --bg-page: var(--slate-50);
+  --bg-surface: #ffffff;
+  --bg-subtle: var(--slate-100);
+  --bg-hover: var(--slate-200);
+  --bg-active: var(--slate-300);
+
+  --text-main: var(--slate-900);
+  --text-muted: var(--slate-600);
+  --text-subtle: var(--slate-400);
+  --text-inverse: #ffffff;
+
+  --border-subtle: var(--slate-200);
+  --border-main: var(--slate-300);
+  --border-strong: var(--slate-400);
+  --border-focus: var(--blue);
+
+  /* Status Tokens (Color Semantics) */
+  --status-good-bg: #ecfdf5;
+  --status-good-text: #065f46;
+  --status-good-border: #a7f3d0;
+  --status-good-icon: var(--green);
+
+  --status-look-bg: #fffbeb;
+  --status-look-text: #92400e;
+  --status-look-border: #fde68a;
+  --status-look-icon: var(--amber);
+
+  --status-problem-bg: #fef2f2;
+  --status-problem-text: #991b1b;
+  --status-problem-border: #fecaca;
+  --status-problem-icon: var(--red);
+
+  --status-waiting-bg: #eff6ff;
+  --status-waiting-text: #1e40af;
+  --status-waiting-border: #bfdbfe;
+  --status-waiting-icon: var(--blue);
+
+  --status-unavailable-bg: var(--slate-100);
+  --status-unavailable-text: var(--slate-600);
+  --status-unavailable-border: var(--slate-300);
+  --status-unavailable-icon: var(--slate-500);
+
+  /* Spacing Grid (4px base) */
+  --space-05: 2px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', 'Noto Sans Devanagari', 'Noto Sans Tamil', sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Layered Soft Shadows */
+  --shadow-xs: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.08), 0 1px 2px -1px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.06);
+  --shadow-dropdown: 0 12px 28px rgba(15, 23, 42, 0.15), 0 4px 8px rgba(15, 23, 42, 0.05);
+
+  /* Motion */
+  --transition-fast: 150ms ease;
+  --transition-normal: 200ms ease;
+  --transition-slow: 300ms ease;
+
+  /* Shell Layout */
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 64px;
+  --topbar-height: 60px;
+}
+
+/* Dark Theme Overrides */
+[data-theme="dark"] {
+  --bg-page: #090d16;
+  --bg-surface: #111827;
+  --bg-subtle: #1f2937;
+  --bg-hover: #374151;
+  --bg-active: #4b5563;
+
+  --text-main: #f9fafb;
+  --text-muted: #9ca3af;
+  --text-subtle: #6b7280;
+  --text-inverse: #111827;
+
+  --border-subtle: #1f2937;
+  --border-main: #374151;
+  --border-strong: #4b5563;
+  --border-focus: #3b82f6;
+
+  /* Dark Status Adjustments */
+  --status-good-bg: rgba(16, 185, 129, 0.15);
+  --status-good-text: #6ee7b7;
+  --status-good-border: rgba(16, 185, 129, 0.3);
+  --status-good-icon: #34d399;
+
+  --status-look-bg: rgba(245, 158, 11, 0.15);
+  --status-look-text: #fcd34d;
+  --status-look-border: rgba(245, 158, 11, 0.3);
+  --status-look-icon: #fbbf24;
+
+  --status-problem-bg: rgba(239, 68, 68, 0.15);
+  --status-problem-text: #fca5a5;
+  --status-problem-border: rgba(239, 68, 68, 0.3);
+  --status-problem-icon: #f87171;
+
+  --status-waiting-bg: rgba(59, 130, 246, 0.15);
+  --status-waiting-text: #93c5fd;
+  --status-waiting-border: rgba(59, 130, 246, 0.3);
+  --status-waiting-icon: #60a5fa;
+
+  --status-unavailable-bg: rgba(107, 114, 128, 0.15);
+  --status-unavailable-text: #d1d5db;
+  --status-unavailable-border: rgba(107, 114, 128, 0.3);
+  --status-unavailable-icon: #9ca3af;
+
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+  --shadow-dropdown: 0 12px 28px rgba(0, 0, 0, 0.7);
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

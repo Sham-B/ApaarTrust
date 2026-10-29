@@ -1,0 +1,16 @@
+[
+  {
+    "id": "todo_01",
+    "title": "Upload Semester 1 Final Approved Roster",
+    "status": "pending",
+    "due": "2026-11-15",
+    "priority": "high"
+  },
+  {
+    "id": "todo_02",
+    "title": "Review EWS category documents for 3 candidates",
+    "status": "completed",
+    "due": "2026-10-25",
+    "priority": "medium"
+  }
+]

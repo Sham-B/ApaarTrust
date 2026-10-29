@@ -1,0 +1,36 @@
+[
+  {
+    "id": "dup_01",
+    "student_record_id": 1,
+    "student_name": "Rohan Aditya Sharma",
+    "apaar_masked": "XXXX-XXXX-1100",
+    "status": "critical",
+    "decision": "pending",
+    "scores": {
+      "token_match": 100,
+      "name_match": 98,
+      "dob_match": 100,
+      "overall_score": 18.4
+    },
+    "inst1": {
+      "id": "1-1090123456",
+      "name": "Aryabhata Institute of Technology",
+      "state": "Delhi",
+      "programme": "B.Tech Computer Science and Engineering",
+      "quota": "Regular",
+      "admission_date": "2024-08-10",
+      "roll": "CSE-24-042"
+    },
+    "inst2": {
+      "id": "1-1090345678",
+      "name": "Chanakya Technological University",
+      "state": "Karnataka",
+      "programme": "B.Tech Computer Science and Engineering",
+      "quota": "Regular",
+      "admission_date": "2024-08-14",
+      "roll": "CTU-24-118"
+    },
+    "summary": "Concurrent active full-time enrolment detected across two AICTE-approved institutions for Academic Year 2024-25.",
+    "rule_id": "DUPLICATE_CROSS_INSTITUTION"
+  }
+]

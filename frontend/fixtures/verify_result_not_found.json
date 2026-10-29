@@ -1,0 +1,8 @@
+{
+  "status": "not_found",
+  "genuine": false,
+  "message": "Credential record not found in the AICTE ApaarTrust central registry.",
+  "disclosed_fields": [],
+  "withheld_fields": [],
+  "what_to_do_next": "Confirm that the candidate has been formally admitted and that the institution has committed its intake batch."
+}

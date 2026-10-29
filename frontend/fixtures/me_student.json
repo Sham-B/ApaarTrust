@@ -1,0 +1,59 @@
+{
+  "role": "Student",
+  "persona": {
+    "name": "Rohan Aditya Sharma",
+    "apaar_masked": "XXXX-XXXX-1100",
+    "token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "programme": "B.Tech Computer Science and Engineering",
+    "institution_name": "Aryabhata Institute of Technology",
+    "badge": "APAAR Verified",
+    "initials": "RS"
+  },
+  "permissions": [
+    "student:own",
+    "view:own_record",
+    "manage:consent",
+    "view:access_log",
+    "view:certificates",
+    "share:presentation"
+  ],
+  "nav": [
+    {
+      "id": "record",
+      "title": "My Record",
+      "href": "#/student/record",
+      "icon": "id-card"
+    },
+    {
+      "id": "consent",
+      "title": "Consent Ledger",
+      "href": "#/student/consent",
+      "icon": "lock"
+    },
+    {
+      "id": "activity",
+      "title": "Who Viewed My Record",
+      "href": "#/student/activity",
+      "icon": "eye"
+    },
+    {
+      "id": "certificates",
+      "title": "My Certificates",
+      "href": "#/student/certificates",
+      "icon": "award"
+    },
+    {
+      "id": "share",
+      "title": "Share Credentials",
+      "href": "#/student/share",
+      "icon": "share-2"
+    },
+    {
+      "id": "help",
+      "title": "Help & Docs",
+      "href": "#/help",
+      "icon": "help-circle"
+    }
+  ]
+}

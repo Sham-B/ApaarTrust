@@ -1,0 +1,8 @@
+{
+  "status": "tampered",
+  "genuine": false,
+  "message": "Ed25519 cryptographic root signature mismatch! The presentation claims or commitment digest were illegally altered.",
+  "disclosed_fields": [],
+  "withheld_fields": [],
+  "what_to_do_next": "DO NOT ACCEPT this credential. The cryptographic seal has been compromised. Report this finding to the AICTE Scrutiny Officer inbox."
+}

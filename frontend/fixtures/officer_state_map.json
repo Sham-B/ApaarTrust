@@ -1,0 +1,126 @@
+{
+  "states": [
+    {
+      "code": "DL",
+      "name": "Delhi",
+      "institutions": 1,
+      "findings": 0,
+      "status": "good",
+      "students": 236
+    },
+    {
+      "code": "MH",
+      "name": "Maharashtra",
+      "institutions": 1,
+      "findings": 2,
+      "status": "problem",
+      "students": 252
+    },
+    {
+      "code": "KA",
+      "name": "Karnataka",
+      "institutions": 1,
+      "findings": 1,
+      "status": "needs_review",
+      "students": 238
+    },
+    {
+      "code": "TS",
+      "name": "Telangana",
+      "institutions": 1,
+      "findings": 1,
+      "status": "needs_review",
+      "students": 240
+    },
+    {
+      "code": "RJ",
+      "name": "Rajasthan",
+      "institutions": 1,
+      "findings": 1,
+      "status": "needs_review",
+      "students": 235
+    },
+    {
+      "code": "TN",
+      "name": "Tamil Nadu",
+      "institutions": 0,
+      "findings": 0,
+      "status": "idle",
+      "students": 0
+    },
+    {
+      "code": "UP",
+      "name": "Uttar Pradesh",
+      "institutions": 0,
+      "findings": 0,
+      "status": "idle",
+      "students": 0
+    },
+    {
+      "code": "GJ",
+      "name": "Gujarat",
+      "institutions": 0,
+      "findings": 0,
+      "status": "idle",
+      "students": 0
+    },
+    {
+      "code": "WB",
+      "name": "West Bengal",
+      "institutions": 0,
+      "findings": 0,
+      "status": "idle",
+      "students": 0
+    },
+    {
+      "code": "KL",
+      "name": "Kerala",
+      "institutions": 0,
+      "findings": 0,
+      "status": "idle",
+      "students": 0
+    },
+    {
+      "code": "MP",
+      "name": "Madhya Pradesh",
+      "institutions": 0,
+      "findings": 0,
+      "status": "idle",
+      "students": 0
+    },
+    {
+      "code": "AP",
+      "name": "Andhra Pradesh",
+      "institutions": 0,
+      "findings": 0,
+      "status": "idle",
+      "students": 0
+    },
+    {
+      "code": "PB",
+      "name": "Punjab",
+      "institutions": 0,
+      "findings": 0,
+      "status": "idle",
+      "students": 0
+    },
+    {
+      "code": "HR",
+      "name": "Haryana",
+      "institutions": 0,
+      "findings": 0,
+      "status": "idle",
+      "students": 0
+    },
+    {
+      "code": "OD",
+      "name": "Odisha",
+      "institutions": 0,
+      "findings": 0,
+      "status": "idle",
+      "students": 0
+    }
+  ],
+  "total_monitored": 5,
+  "total_open_findings": 5
+}

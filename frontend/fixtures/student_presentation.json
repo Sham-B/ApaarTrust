@@ -1,0 +1,38 @@
+{
+  "credential_id": "cred-demo-aicte-2026",
+  "issuer": "AICTE-ApaarTrust-Authority",
+  "issued_at": "2026-10-28T06:46:58.264474+00:00",
+  "expires_at": "2027-10-28T06:46:58.264474+00:00",
+  "revoked": false,
+  "commitments": {
+    "name": "c801dda0010620380f2197af59fc5e08ae70d98f2059dfc9dc520be644e2526f",
+    "dob": "4047cdee99eb6605e4f6a40c64e5cde7786bf6a958a7a9b9bd5dbab5a5facb45",
+    "gender": "1b18f33081c2315d7e39ad830635981f26a0dfee45a3e56d6be1e6741acfcf8b",
+    "programme": "a77f37198d4f57d70b6cae494cb7851e135927739b1c077750a1ffa8caed5b7b",
+    "institution": "d12999f908e03fc666df06983b5dd89873480cb87d9d0ea5ea7b4f10dfa830ba",
+    "enrolment_status": "73755554583bc57117ddb0f8da75196d7abee2a10f508236c4aa4ab1e5afc983",
+    "academic_year": "37e2d09dfe3b1b380b8f7c00e5989282856ab7dbd7c01925db1b5087ee61ef6b",
+    "student_id": "886f8358b03c4552b37441ec8489d543b371ac7ad0893d30c6a5c35d69d7c47a"
+  },
+  "signature": "g+5eLJxnTUFSkTOMCgWJ0LtrsFPhuCe9Y3BvJ4BzvF1QWKNPZHPzqcdQCG0RBHtwlcFbY7s50UEQoeE+ElUnAw==",
+  "public_key_b64": "JotUuNBJT/4L+0CPdnYueB/DGRbQYL4lCG0FCS28rJc=",
+  "disclosed_claims": {
+    "name": "Rohan Aditya Sharma",
+    "programme": "B.Tech Computer Science and Engineering"
+  },
+  "disclosed_salts": {
+    "name": "a4f6ec94506c681379ad92e0675f9b25",
+    "programme": "9113a41e46343d12c89bf6535f93d8f0"
+  },
+  "withheld_fields": [
+    "dob",
+    "gender",
+    "institution",
+    "enrolment_status",
+    "academic_year",
+    "student_id"
+  ],
+  "purpose": "Graduate Hiring",
+  "consent_grant_id": "cg_bf290ffed0fc",
+  "generated_at": "2026-10-29T10:14:17.218680+00:00"
+}

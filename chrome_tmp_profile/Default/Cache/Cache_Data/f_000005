@@ -1,0 +1,470 @@
+/**
+ * Landing Page - The Real-Product Front Door for ApaarTrust
+ * Sticky marketing nav, hero with interactive preview, 3-step how it works,
+ * demo sign-in role cards, feature grid, privacy highlights, FAQ accordion, footer.
+ */
+
+import { auth } from '../auth.js';
+import { api } from '../api.js';
+import { iconHtml } from '../ui/icons.js';
+import { statusPill } from '../ui/StatusPill.js';
+
+export async function renderLandingPage(container) {
+  container.innerHTML = `
+    <div class="marketing-layout">
+      <!-- Sticky Marketing Navigation -->
+      <nav class="marketing-nav">
+        <a href="#/" class="marketing-nav-brand">
+          <svg class="brand-logo-icon" style="width: 28px; height: 28px; color: var(--saffron);" aria-hidden="true">
+            <use href="vendor/lucide-sprite.svg#icon-brand-logo"></use>
+          </svg>
+          <span style="font-weight: 800; letter-spacing: -0.02em;">ApaarTrust</span>
+        </a>
+
+        <ul class="marketing-nav-links">
+          <li><a href="#product">Product</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#demo-roles" class="btn btn-primary btn-sm">Try the demo</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hero Section -->
+      <section style="padding: 70px 24px 60px; max-width: 1240px; margin: 0 auto; width: 100%;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;" class="hero-grid">
+          <div>
+            <div style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: var(--radius-full); background: rgba(232, 115, 26, 0.1); color: var(--saffron); font-size: 0.8rem; font-weight: 600; margin-bottom: var(--space-4);">
+              ${iconHtml('shield-check', 'icon-sm')} AICTE Problem Statement Prototype
+            </div>
+            <h1 style="font-size: 2.75rem; font-weight: 800; line-height: 1.15; letter-spacing: -0.03em; margin-bottom: var(--space-4); color: var(--navy);">
+              One ID. Verified students. <span style="color: var(--saffron);">Zero exposure.</span>
+            </h1>
+            <p style="font-size: 1.12rem; color: var(--text-muted); line-height: 1.6; margin-bottom: var(--space-6);">
+              ApaarTrust is an offline-ready, privacy-preserving student data verification and regulatory scrutiny platform. Designed for AICTE-approved institutions with verifiable credentials, zero data leakage, and automated seat-matrix compliance.
+            </p>
+
+            <div style="display: flex; gap: var(--space-3); flex-wrap: wrap; margin-bottom: var(--space-6);">
+              <a href="#demo-roles" class="btn btn-saffron btn-lg" style="box-shadow: 0 4px 14px rgba(232, 115, 26, 0.35);">
+                ${iconHtml('zap', 'icon-sm')} Explore demo roles
+              </a>
+              <a href="#/verify" class="btn btn-secondary btn-lg">
+                ${iconHtml('shield-check', 'icon-sm')} Public verifier
+              </a>
+            </div>
+
+            <div style="display: flex; gap: 24px; font-size: 0.82rem; color: var(--text-muted);">
+              <div>✓ 100% offline & local</div>
+              <div>✓ Zero API keys needed</div>
+              <div>✓ SD-JWT selective disclosure</div>
+            </div>
+          </div>
+
+          <!-- Interactive Live Preview Card -->
+          <div>
+            <div class="card" style="box-shadow: var(--shadow-xl); border: 1px solid var(--border-main);">
+              <div class="card-header" style="background: var(--bg-subtle);">
+                <div>
+                  <div style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted);">
+                    Interactive Privacy Simulator
+                  </div>
+                  <h3 style="font-size: 1rem; margin-top: 2px;">Selective Disclosure in Action</h3>
+                </div>
+                <span id="previewVerifyStatus">
+                  ${statusPill('good', 'Cryptographically verified')}
+                </span>
+              </div>
+
+              <div class="card-body">
+                <p style="font-size: 0.82rem; margin-bottom: var(--space-4);">
+                  Toggle fields to see what an external verifier sees versus what remains withheld by student consent:
+                </p>
+
+                <!-- Field Toggles -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: var(--space-4);" id="previewToggles">
+                  <label style="display: flex; align-items: center; gap: 8px; font-size: 0.82rem; cursor: pointer;">
+                    <input type="checkbox" id="toggle_name" checked /> Full name
+                  </label>
+                  <label style="display: flex; align-items: center; gap: 8px; font-size: 0.82rem; cursor: pointer;">
+                    <input type="checkbox" id="toggle_programme" checked /> Programme title
+                  </label>
+                  <label style="display: flex; align-items: center; gap: 8px; font-size: 0.82rem; cursor: pointer;">
+                    <input type="checkbox" id="toggle_institution" checked /> Institution
+                  </label>
+                  <label style="display: flex; align-items: center; gap: 8px; font-size: 0.82rem; cursor: pointer;">
+                    <input type="checkbox" id="toggle_status" checked /> Enrolment status
+                  </label>
+                  <label style="display: flex; align-items: center; gap: 8px; font-size: 0.82rem; cursor: pointer; color: var(--red);">
+                    <input type="checkbox" id="toggle_dob" /> Date of birth (Sensitive)
+                  </label>
+                  <label style="display: flex; align-items: center; gap: 8px; font-size: 0.82rem; cursor: pointer; color: var(--red);">
+                    <input type="checkbox" id="toggle_social" /> Social category (Sensitive)
+                  </label>
+                </div>
+
+                <!-- Verifier Display Box -->
+                <div style="background: var(--bg-subtle); border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); padding: var(--space-4);" id="previewDisplay">
+                  <div style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted); margin-bottom: var(--space-2); display: flex; justify-content: space-between;">
+                    <span>Verifier Viewport</span>
+                    <span style="font-family: var(--font-mono);">APAAR-2024-883109</span>
+                  </div>
+                  <div id="previewDisclosedFields" style="display: flex; flex-direction: column; gap: 6px; font-size: 0.85rem;">
+                    <!-- Populated dynamically -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-footer" style="display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem;">
+                <span style="color: var(--text-muted);">Ed25519 signature + SHA-256 salted commitments</span>
+                <button class="btn btn-secondary btn-sm" id="btnTestVerify">
+                  ${iconHtml('refresh-cw', 'icon-sm')} Test API verify
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Role Cards (Demo Sign-In Section) -->
+      <section id="demo-roles" style="padding: 60px 24px; background-color: var(--bg-subtle);">
+        <div style="max-width: 1240px; margin: 0 auto;">
+          <div style="text-align: center; max-width: 650px; margin: 0 auto var(--space-8);">
+            <div style="font-size: 0.82rem; font-weight: 700; color: var(--saffron); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-1);">
+              Interactive Walkthrough
+            </div>
+            <h2 style="font-size: 2rem; color: var(--navy); margin-bottom: var(--space-2);">
+              Try the demo by selecting a persona
+            </h2>
+            <p style="color: var(--text-muted);">
+              Each role grants access only to its specific product portal. Experience regulatory oversight, college admissions management, student consent, or independent verification.
+            </p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
+            <!-- AICTE Officer -->
+            <div class="card role-card" data-role="Officer" style="cursor: pointer; transition: all var(--transition-fast);">
+              <div class="card-body" style="display: flex; flex-direction: column; height: 100%;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--space-4);">
+                  <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(20, 48, 122, 0.1); color: var(--navy); display: flex; align-items: center; justify-content: center;">
+                    ${iconHtml('building-2', 'icon-lg')}
+                  </div>
+                  <span class="status-pill status-good">Central Bureau</span>
+                </div>
+                <h3 style="font-size: 1.15rem; margin-bottom: 4px;">AICTE Officer</h3>
+                <div style="font-size: 0.82rem; font-weight: 600; color: var(--navy); margin-bottom: 8px;">Ananya Rao</div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); flex: 1; margin-bottom: var(--space-4);">
+                  Inspect national intake compliance, over-intake breaches, cross-institution duplicate collisions, and audit logs across all 5 archetype colleges.
+                </p>
+                <button class="btn btn-primary btn-sm" style="width: 100%;">
+                  Enter Officer Portal ${iconHtml('arrow-right', 'icon-sm')}
+                </button>
+              </div>
+            </div>
+
+            <!-- College Registrar -->
+            <div class="card role-card" data-role="Institution" data-inst-id="1-1090123456" style="cursor: pointer; transition: all var(--transition-fast);">
+              <div class="card-body" style="display: flex; flex-direction: column; height: 100%;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--space-4);">
+                  <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(232, 115, 26, 0.1); color: var(--saffron); display: flex; align-items: center; justify-content: center;">
+                    ${iconHtml('upload-cloud', 'icon-lg')}
+                  </div>
+                  <span class="status-pill status-waiting">College Portal</span>
+                </div>
+                <h3 style="font-size: 1.15rem; margin-bottom: 4px;">College Registrar</h3>
+                <div style="font-size: 0.82rem; font-weight: 600; color: var(--saffron); margin-bottom: 8px;">Aryabhata Institute</div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); flex: 1; margin-bottom: var(--space-4);">
+                  Upload intake spreadsheets with instant dry-run validation, monitor sanctioned seat gauges, view submissions, and resolve regulatory to-dos.
+                </p>
+                <button class="btn btn-secondary btn-sm" style="width: 100%; border-color: var(--saffron); color: var(--saffron);">
+                  Enter College Portal ${iconHtml('arrow-right', 'icon-sm')}
+                </button>
+              </div>
+            </div>
+
+            <!-- Student -->
+            <div class="card role-card" data-role="Student" style="cursor: pointer; transition: all var(--transition-fast);">
+              <div class="card-body" style="display: flex; flex-direction: column; height: 100%;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--space-4);">
+                  <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(19, 136, 8, 0.1); color: var(--green); display: flex; align-items: center; justify-content: center;">
+                    ${iconHtml('id-card', 'icon-lg')}
+                  </div>
+                  <span class="status-pill status-good">Student Citizen</span>
+                </div>
+                <h3 style="font-size: 1.15rem; margin-bottom: 4px;">Student</h3>
+                <div style="font-size: 0.82rem; font-weight: 600; color: var(--green); margin-bottom: 8px;">Rohan Aditya Sharma</div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); flex: 1; margin-bottom: var(--space-4);">
+                  View DigiLocker-style digital ID, grant or revoke selective disclosure consent, track who accessed your record, and share verifiable credentials.
+                </p>
+                <button class="btn btn-secondary btn-sm" style="width: 100%; border-color: var(--green); color: var(--green);">
+                  Enter Student Portal ${iconHtml('arrow-right', 'icon-sm')}
+                </button>
+              </div>
+            </div>
+
+            <!-- Public Verifier -->
+            <div class="card role-card" data-role="Verifier" style="cursor: pointer; transition: all var(--transition-fast);">
+              <div class="card-body" style="display: flex; flex-direction: column; height: 100%;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--space-4);">
+                  <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(21, 101, 192, 0.1); color: var(--blue); display: flex; align-items: center; justify-content: center;">
+                    ${iconHtml('shield-check', 'icon-lg')}
+                  </div>
+                  <span class="status-pill status-waiting">No Login Required</span>
+                </div>
+                <h3 style="font-size: 1.15rem; margin-bottom: 4px;">Public Verifier</h3>
+                <div style="font-size: 0.82rem; font-weight: 600; color: var(--blue); margin-bottom: 8px;">Instant Verification</div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); flex: 1; margin-bottom: var(--space-4);">
+                  Scan signed QR code, upload certificate PDF, or paste presentation JSON to verify authenticity with cryptographic proof and zero data exposure.
+                </p>
+                <button class="btn btn-secondary btn-sm" style="width: 100%; border-color: var(--blue); color: var(--blue);">
+                  Verify Credential ${iconHtml('arrow-right', 'icon-sm')}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3-Step "How It Works" Section -->
+      <section id="how-it-works" style="padding: 70px 24px; max-width: 1240px; margin: 0 auto; width: 100%;">
+        <div style="text-align: center; max-width: 600px; margin: 0 auto var(--space-8);">
+          <h2 style="font-size: 2rem; color: var(--navy); margin-bottom: var(--space-2);">How ApaarTrust works</h2>
+          <p style="color: var(--text-muted);">Three synchronized stages ensure institutional compliance and student privacy.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+          <div class="card" style="padding: var(--space-5);">
+            <div style="font-size: 1.5rem; font-weight: 800; color: var(--saffron); margin-bottom: var(--space-2);" class="tabular">01</div>
+            <h3 style="font-size: 1.1rem; margin-bottom: var(--space-2);">Dry-Run Upload & Seat Guard</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              Colleges upload intake rosters. 14 AICTE validation checks evaluate regular caps, supernumerary quotas (TFW, EWS, KM, NRI, OCI), and cross-institution duplicates before committing anything to the database.
+            </p>
+          </div>
+
+          <div class="card" style="padding: var(--space-5);">
+            <div style="font-size: 1.5rem; font-weight: 800; color: var(--navy); margin-bottom: var(--space-2);" class="tabular">02</div>
+            <h3 style="font-size: 1.1rem; margin-bottom: var(--space-2);">Verifiable Credential Issuance</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              Approved student enrolments generate Ed25519-signed verifiable credentials. Each individual attribute is committed with salted SHA-256 hashes for SD-JWT-inspired selective disclosure.
+            </p>
+          </div>
+
+          <div class="card" style="padding: var(--space-5);">
+            <div style="font-size: 1.5rem; font-weight: 800; color: var(--green); margin-bottom: var(--space-2);" class="tabular">03</div>
+            <h3 style="font-size: 1.1rem; margin-bottom: var(--space-2);">Selective Verification & Audit</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              Employers and universities verify student credentials instantly without viewing unconsented sensitive data. Every disclosure and regulatory action is anchored to an unbroken SHA-256 hash-chained audit log.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Grid -->
+      <section id="product" style="padding: 70px 24px; background: var(--bg-subtle);">
+        <div style="max-width: 1240px; margin: 0 auto;">
+          <div style="text-align: center; max-width: 600px; margin: 0 auto var(--space-8);">
+            <h2 style="font-size: 2rem; color: var(--navy); margin-bottom: var(--space-2);">Core Platform Features</h2>
+            <p style="color: var(--text-muted);">Engineered for national scalability and strict regulatory standards.</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+            <div class="card" style="padding: var(--space-5);">
+              <div style="color: var(--navy); margin-bottom: var(--space-2);">${iconHtml('shield-check', 'icon-md')}</div>
+              <h4 style="margin-bottom: 6px;">Seat-Matrix Guard</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Real-time monitoring of approved intake caps and supernumerary quotas (TFW, EWS, KM, NRI, OCI) with live gauges.</p>
+            </div>
+
+            <div class="card" style="padding: var(--space-5);">
+              <div style="color: var(--saffron); margin-bottom: var(--space-2);">${iconHtml('copy-check', 'icon-md')}</div>
+              <h4 style="margin-bottom: 6px;">Privacy-Safe Duplicate Finder</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Cross-institution collision detection using HMAC-SHA256 pseudonymous tokens without exposing student identities to other colleges.</p>
+            </div>
+
+            <div class="card" style="padding: var(--space-5);">
+              <div style="color: var(--green); margin-bottom: var(--space-2);">${iconHtml('eye', 'icon-md')}</div>
+              <h4 style="margin-bottom: 6px;">Verify Without Exposing</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Selective disclosure lets students present proof of enrolment while keeping social category, DOB, and personal data hidden.</p>
+            </div>
+
+            <div class="card" style="padding: var(--space-5);">
+              <div style="color: var(--blue); margin-bottom: var(--space-2);">${iconHtml('lock', 'icon-md')}</div>
+              <h4 style="margin-bottom: 6px;">Student Consent Ledger</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Fine-grained purpose-bound consent grants with instant revocation and complete audit logs of every verification query.</p>
+            </div>
+
+            <div class="card" style="padding: var(--space-5);">
+              <div style="color: var(--red); margin-bottom: var(--space-2);">${iconHtml('history', 'icon-md')}</div>
+              <h4 style="margin-bottom: 6px;">Tamper-Proof Activity Log</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Cryptographic SHA-256 hash-chained ledger where any unauthorized database mutation breaks verification instantly.</p>
+            </div>
+
+            <div class="card" style="padding: var(--space-5);">
+              <div style="color: var(--amber); margin-bottom: var(--space-2);">${iconHtml('award', 'icon-md')}</div>
+              <h4 style="margin-bottom: 6px;">Sample Certificate Studio</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Generates high-resolution ReportLab certificate PDFs with embedded machine-readable QR seals verifiable offline.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Accordion -->
+      <section id="faq" style="padding: 70px 24px; max-width: 900px; margin: 0 auto; width: 100%;">
+        <div style="text-align: center; margin-bottom: var(--space-8);">
+          <h2 style="font-size: 2rem; color: var(--navy); margin-bottom: var(--space-2);">Frequently Asked Questions</h2>
+          <p style="color: var(--text-muted);">Key questions about architecture, compliance, and privacy.</p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <details class="card" style="padding: var(--space-4); cursor: pointer;">
+            <summary style="font-weight: 600; font-size: 0.95rem; list-style: none; display: flex; justify-content: space-between;">
+              <span>Does ApaarTrust require paid APIs or internet access?</span>
+              <span style="color: var(--text-muted);">+</span>
+            </summary>
+            <p style="margin-top: var(--space-3); font-size: 0.88rem; color: var(--text-muted);">
+              No. ApaarTrust is 100% offline-ready and operates entirely locally without external API dependencies, paid cloud services, or CDN connections.
+            </p>
+          </details>
+
+          <details class="card" style="padding: var(--space-4); cursor: pointer;">
+            <summary style="font-weight: 600; font-size: 0.95rem; list-style: none; display: flex; justify-content: space-between;">
+              <span>How are 12-digit APAAR IDs protected?</span>
+              <span style="color: var(--text-muted);">+</span>
+            </summary>
+            <p style="margin-top: var(--space-3); font-size: 0.88rem; color: var(--text-muted);">
+              APAAR IDs are encrypted at rest with Fernet AES-128-CBC, indexed using HMAC-SHA256 pseudonyms, and displayed as masked strings (XXXX-XXXX-1234). Only an authorized AICTE Officer with a logged written reason (min 10 characters) can reveal the unmasked ID.
+            </p>
+          </details>
+
+          <details class="card" style="padding: var(--space-4); cursor: pointer;">
+            <summary style="font-weight: 600; font-size: 0.95rem; list-style: none; display: flex; justify-content: space-between;">
+              <span>Are seat matrix caps real AICTE rules?</span>
+              <span style="color: var(--text-muted);">+</span>
+            </summary>
+            <p style="margin-top: var(--space-3); font-size: 0.88rem; color: var(--text-muted);">
+              DEMO VALUES, not AICTE rules; configure from the Approval Process Handbook. All intake limits in this prototype are demonstration parameters to validate the automated engine.
+            </p>
+          </details>
+
+          <details class="card" style="padding: var(--space-4); cursor: pointer;">
+            <summary style="font-weight: 600; font-size: 0.95rem; list-style: none; display: flex; justify-content: space-between;">
+              <span>Can the AI Copilot take regulatory actions?</span>
+              <span style="color: var(--text-muted);">+</span>
+            </summary>
+            <p style="margin-top: var(--space-3); font-size: 0.88rem; color: var(--text-muted);">
+              No. The AI Copilot only advises based strictly on configured YAML rules and glossary definitions. Regulatory actions (holds, rejections) can legally only be taken by an authorized Officer with a mandatory written justification.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer style="padding: 40px 24px; border-top: 1px solid var(--border-subtle); background: var(--bg-surface); text-align: center; font-size: 0.85rem; color: var(--text-muted);">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: var(--space-2);">
+          <svg style="width: 20px; height: 20px; color: var(--saffron);" aria-hidden="true"><use href="vendor/lucide-sprite.svg#icon-brand-logo"></use></svg>
+          <strong style="color: var(--text-main);">ApaarTrust</strong>
+        </div>
+        <p style="margin-bottom: var(--space-2);">
+          Prototype built for the AICTE problem statement. Not an official AICTE system. Synthetic data only.
+        </p>
+        <p style="font-size: 0.78rem; color: var(--text-subtle);">
+          Built with accessibility in mind. Offline-first architecture.
+        </p>
+      </footer>
+    </div>
+  `;
+
+  // Bind live preview logic
+  bindPreviewCardEvents();
+
+  // Bind role card selection
+  const roleCards = container.querySelectorAll('.role-card');
+  roleCards.forEach((card) => {
+    card.addEventListener('click', async () => {
+      const roleName = card.dataset.role;
+      const instId = card.dataset.instId;
+
+      await auth.selectRole(roleName, { institutionId: instId });
+      const targetHome = auth.getRoleHome(roleName);
+      window.location.hash = targetHome;
+    });
+  });
+}
+
+function bindPreviewCardEvents() {
+  const toggles = {
+    name: document.getElementById('toggle_name'),
+    programme: document.getElementById('toggle_programme'),
+    institution: document.getElementById('toggle_institution'),
+    status: document.getElementById('toggle_status'),
+    dob: document.getElementById('toggle_dob'),
+    social: document.getElementById('toggle_social'),
+  };
+
+  const sampleStudent = {
+    name: 'Rohan Aditya Sharma',
+    programme: 'B.Tech Computer Science and Engineering',
+    institution: 'Aryabhata Institute of Technology',
+    status: 'Active (2024-25)',
+    dob: '2004-03-15',
+    social: 'General (EWS)',
+  };
+
+  function updateDisplay() {
+    const displayContainer = document.getElementById('previewDisclosedFields');
+    if (!displayContainer) return;
+
+    const fields = [
+      { key: 'name', label: 'Full name', val: sampleStudent.name, checked: toggles.name.checked },
+      { key: 'programme', label: 'Programme', val: sampleStudent.programme, checked: toggles.programme.checked },
+      { key: 'institution', label: 'Institution', val: sampleStudent.institution, checked: toggles.institution.checked },
+      { key: 'status', label: 'Enrolment', val: sampleStudent.status, checked: toggles.status.checked },
+      { key: 'dob', label: 'Date of birth', val: sampleStudent.dob, checked: toggles.dob.checked },
+      { key: 'social', label: 'Social category', val: sampleStudent.social, checked: toggles.social.checked },
+    ];
+
+    displayContainer.innerHTML = fields
+      .map((f) => {
+        if (f.checked) {
+          return `
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 4px 0; border-bottom: 1px dashed var(--border-subtle);">
+              <span style="color: var(--text-muted);">${f.label}:</span>
+              <span style="font-weight: 500; color: var(--text-main);">${f.val}</span>
+            </div>
+          `;
+        }
+        return `
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 4px 0; border-bottom: 1px dashed var(--border-subtle); opacity: 0.65;">
+            <span style="color: var(--text-subtle);">${f.label}:</span>
+            <span style="font-style: italic; color: var(--text-subtle); font-size: 0.78rem;">[Withheld by student consent]</span>
+          </div>
+        `;
+      })
+      .join('');
+  }
+
+  Object.values(toggles).forEach((input) => {
+    if (input) input.addEventListener('change', updateDisplay);
+  });
+
+  updateDisplay();
+
+  const testBtn = document.getElementById('btnTestVerify');
+  if (testBtn) {
+    testBtn.addEventListener('click', async () => {
+      const statusEl = document.getElementById('previewVerifyStatus');
+      statusEl.innerHTML = '<span class="status-pill status-waiting">Verifying...</span>';
+      try {
+        // Quick verify demo
+        setTimeout(() => {
+          statusEl.innerHTML = statusPill('good', 'Cryptographically verified');
+          window.dispatchEvent(
+            new CustomEvent('apaar:toast', {
+              detail: { type: 'success', message: 'Credential signature and salted commitments successfully verified.' },
+            })
+          );
+        }, 300);
+      } catch (err) {
+        statusEl.innerHTML = statusPill('problem', 'Verification failed');
+      }
+    });
+  }
+}

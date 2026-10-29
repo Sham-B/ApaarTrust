@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ApaarTrust · Student Data Management & Verification Platform</title>
+  <meta name="description" content="AICTE APAAR ID-based student data management, intake compliance, and privacy-preserving verification platform." />
+  <meta name="keywords" content="APAAR, AICTE, student data, verification, compliance, SD-JWT, zero knowledge, privacy" />
+  <meta name="author" content="ApaarTrust Team" />
+  <meta name="theme-color" content="#14307a" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' http: https:;" />
+
+  <!-- Favicon and PWA Manifest -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- Open Graph / Social Sharing Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ApaarTrust · Student Data Management & Verification Platform" />
+  <meta property="og:description" content="One ID. Verified students. Zero exposure. Privacy-preserving regulatory scrutiny and verifiable credentials for AICTE-approved institutions." />
+  <meta property="og:image" content="og-image.png" />
+
+  <!-- Vendor CSS & Tokens -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+
+  <!-- Preload Vendored Lucide Sprite -->
+  <link rel="preload" href="vendor/lucide-sprite.svg" as="image" type="image/svg+xml" />
+
+  <!-- Global Config -->
+  <script src="config.js"></script>
+
+  <!-- Vendored Core Libraries -->
+  <script src="vendor/chart.umd.min.js"></script>
+  <script src="vendor/cytoscape.min.js"></script>
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#mainContent" class="sr-only focus:not-sr-only">Skip to main content</a>
+
+  <!-- Mount Point for Hash Router -->
+  <div id="app"></div>
+
+  <!-- Main ES Module Application Script -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

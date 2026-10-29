@@ -1,0 +1,147 @@
+{
+  "institution": {
+    "name": "Bhaskara College of Engineering & Research",
+    "district": "Pune",
+    "aicte_pid": "1-1090234567",
+    "contact_email": "registrar@11090234567.edu.in",
+    "id": "1-1090234567",
+    "state": "Maharashtra",
+    "address": "Shivaji Nagar Expressway, Pune, Maharashtra - 411005",
+    "created_at": "2026-10-28T06:46:56.012833Z"
+  },
+  "seat_matrices": [
+    {
+      "academic_year": "2024-25",
+      "id": 4,
+      "supernumerary_caps": {
+        "TFW": 6,
+        "EWS": 12,
+        "KM": 3,
+        "PMSSS": 2,
+        "NRI": 6,
+        "FN_OCI": 18
+      },
+      "approved_intake": 120,
+      "institution_id": "1-1090234567",
+      "programme": "B.Tech Computer Science and Engineering",
+      "created_at": "2026-10-28T06:46:56.034691Z"
+    },
+    {
+      "academic_year": "2024-25",
+      "id": 5,
+      "supernumerary_caps": {
+        "TFW": 3,
+        "EWS": 6,
+        "KM": 3,
+        "PMSSS": 2,
+        "NRI": 3,
+        "FN_OCI": 9
+      },
+      "approved_intake": 60,
+      "institution_id": "1-1090234567",
+      "programme": "B.Tech Electronics and Communication Engineering",
+      "created_at": "2026-10-28T06:46:56.035324Z"
+    },
+    {
+      "academic_year": "2024-25",
+      "id": 6,
+      "supernumerary_caps": {
+        "TFW": 3,
+        "EWS": 6,
+        "KM": 3,
+        "PMSSS": 2,
+        "NRI": 3,
+        "FN_OCI": 9
+      },
+      "approved_intake": 60,
+      "institution_id": "1-1090234567",
+      "programme": "B.Tech Mechanical Engineering",
+      "created_at": "2026-10-28T06:46:56.035783Z"
+    }
+  ],
+  "student_count": 294,
+  "findings": [
+    {
+      "student_record_id": null,
+      "id": 1,
+      "rule_id": "SEAT_CAP_REGULAR",
+      "plain_reason": "Regular admissions in B.Tech CSE (148 students) exceed sanctioned intake (120 seats) by 28 seats.",
+      "benign_hypotheses": [
+        {
+          "title": "State Mop-Up Spot Allotment",
+          "description": "State Technical Education Directorate sanctioned additional spot round allotments pending portal update."
+        },
+        {
+          "title": "Misclassified Quota Category",
+          "description": "Certain admitted students belong to EWS or state sponsored quotas but were flagged as Regular."
+        }
+      ],
+      "status": "in_review",
+      "institution_id": "1-1090234567",
+      "row_number": 121,
+      "submission_id": "sub_11090234567_2024_v1",
+      "severity": "high",
+      "evidence": {
+        "programme": "B.Tech Computer Science and Engineering",
+        "approved_intake": 120,
+        "actual_regular_admitted": 148,
+        "excess": 28
+      },
+      "fix_hint": "Review admission orders. Reclassify eligible supernumerary students or request intake regularization.",
+      "created_at": "2026-10-28T06:46:57.364175Z"
+    },
+    {
+      "student_record_id": null,
+      "id": 2,
+      "rule_id": "SEAT_CAP_SUPERNUMERARY",
+      "plain_reason": "TFW quota admissions (14 students) exceed maximum 5% supernumerary ceiling (6 seats) by 8 seats.",
+      "benign_hypotheses": [
+        {
+          "title": "Category Code Entry Slip",
+          "description": "Economically Weaker Section (EWS) or general scholarship students mistakenly marked with TFW quota code."
+        }
+      ],
+      "status": "open",
+      "institution_id": "1-1090234567",
+      "row_number": 135,
+      "submission_id": "sub_11090234567_2024_v1",
+      "severity": "high",
+      "evidence": {
+        "programme": "B.Tech Computer Science and Engineering",
+        "category": "TFW",
+        "max_allowed": 6,
+        "actual_admitted": 14,
+        "excess": 8
+      },
+      "fix_hint": "Verify state counseling allotment letters and correct candidate category to EWS or General.",
+      "created_at": "2026-10-28T06:46:57.364423Z"
+    }
+  ],
+  "submissions": [
+    {
+      "version": 1,
+      "id": "sub_11090234567_2024_v1",
+      "filename": "1-1090234567_student_intake_2024.xlsx",
+      "valid_rows": 292,
+      "submission_hash": "hash_1-1090234567_v1",
+      "created_at": "2026-10-28T06:46:56.958516Z",
+      "held_by_officer": false,
+      "adverse_reason": null,
+      "action_timestamp": null,
+      "status": "committed",
+      "institution_id": "1-1090234567",
+      "academic_year": "2024-25",
+      "total_rows": 294,
+      "flagged_rows": 2,
+      "counts": {
+        "critical": 0,
+        "high": 2,
+        "medium": 0,
+        "low": 0
+      },
+      "committed_at": null,
+      "rejected_by_officer": false,
+      "officer_id": null
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+  "available_fields": [
+    {
+      "key": "name",
+      "label": "Full Name",
+      "sensitive": false
+    },
+    {
+      "key": "programme",
+      "label": "Degree & Programme",
+      "sensitive": false
+    },
+    {
+      "key": "institution",
+      "label": "Institution Name",
+      "sensitive": false
+    },
+    {
+      "key": "enrolment_status",
+      "label": "Enrolment Status (Active)",
+      "sensitive": false
+    },
+    {
+      "key": "academic_year",
+      "label": "Academic Year",
+      "sensitive": false
+    },
+    {
+      "key": "dob",
+      "label": "Date of Birth",
+      "sensitive": true
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "sensitive": true
+    },
+    {
+      "key": "social_category",
+      "label": "Affirmative Action / Social Category",
+      "sensitive": true
+    }
+  ],
+  "grants": [
+    {
+      "purpose": "Public",
+      "created_at": "2026-10-28T06:47:00.207694Z",
+      "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+      "revoked_at": null,
+      "allowed_fields": [
+        "name",
+        "programme"
+      ],
+      "id": "cg_bf290ffed0fc",
+      "expires_at": "2026-11-27T06:47:00.374156Z"
+    },
+    {
+      "purpose": "Employment Verification",
+      "created_at": "2026-10-28T06:46:59.877201Z",
+      "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+      "revoked_at": null,
+      "allowed_fields": [
+        "name",
+        "programme",
+        "institution"
+      ],
+      "id": "cg_e4281ba8dfe4",
+      "expires_at": "2026-11-27T06:47:00.374131Z"
+    },
+    {
+      "purpose": "Employment Background Verification",
+      "created_at": "2026-10-28T06:46:58.264474Z",
+      "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+      "revoked_at": null,
+      "allowed_fields": [
+        "name",
+        "programme",
+        "institution",
+        "enrolment_status"
+      ],
+      "id": "cg-demo-2026-001",
+      "expires_at": "2026-11-27T06:47:00.374077Z"
+    }
+  ]
+}

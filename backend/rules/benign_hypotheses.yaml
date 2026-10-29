@@ -1,0 +1,136 @@
+# ApaarTrust - Benign Hypotheses, Plain Reasons, and Fix Hints Dictionary
+# Provides balanced explanations to prevent premature adverse decisions
+
+hypotheses:
+  APAAR_FORMAT:
+    plain_reason: "The APAAR ID entered is not a valid 12-digit numeric sequence."
+    benign_explanations:
+      - title: "Leading Zero Truncation"
+        description: "Spreadsheet software (e.g., Excel) may have automatically stripped leading zeroes from 12-digit numbers."
+      - title: "Typographical Insertion"
+        description: "Clerical copy-paste included dashes, spaces, or an Aadhaar/enrollment application slip number instead of the 12-digit APAAR."
+    fix_hint: "Verify original APAAR card or DigiLocker pull. Format cells as Text to preserve leading zeroes."
+
+  REGISTRY_LOOKUP:
+    plain_reason: "The APAAR ID could not be found or verified in the Central APAAR Registry."
+    benign_explanations:
+      - title: "Registry Synchronization Delay"
+        description: "The student created their APAAR ID recently on the ABC/DigiLocker portal, and central sync has not replicated to this regional node."
+      - title: "Clerical Digit Transposition"
+        description: "A single digit was mistyped by the applicant during institutional admission registration."
+    fix_hint: "Request student to generate DigiLocker verification slip or retry lookup after 24 hours."
+
+  REGISTRY_MISMATCH_NAME:
+    plain_reason: "The student name in college records differs from the legal name recorded in the APAAR Registry."
+    benign_explanations:
+      - title: "Initials Expansion or Patronymic Placement"
+        description: "State high school board certificate expanded initials into full ancestral names, whereas APAAR contains abbreviated initials."
+      - title: "Phonetic Transliteration Difference"
+        description: "Differences in English spelling transliterated from regional language records (e.g., Laxmi vs Lakshmi, Mohammed vs Mohd)."
+    fix_hint: "Review 10th standard passing certificate and government photo ID. Update student master profile to match gazette or APAAR name."
+
+  REGISTRY_MISMATCH_DOB:
+    plain_reason: "The submitted Date of Birth does not match the birth date on the Central APAAR Registry."
+    benign_explanations:
+      - title: "Date-Month Format Inversion"
+        description: "Confusion between DD/MM/YYYY and MM/DD/YYYY during manual data entry."
+      - title: "School Admission Estimated DOB"
+        description: "Historical school records listed an estimated birth date that was later corrected in the municipal birth register."
+    fix_hint: "Inspect student's birth certificate or Aadhaar update receipt. Enter corrected DOB in DD/MM/YYYY format."
+
+  REGISTRY_CONSENT_MISSING:
+    plain_reason: "No active digital consent grant was registered by the student for institutional verification."
+    benign_explanations:
+      - title: "Consent Token Expired"
+        description: "The student's one-time e-KYC consent window elapsed before institutional submission batch was generated."
+      - title: "Unchecked Consent Checkbox"
+        description: "Student completed college admission form without authenticating via DigiLocker OTP consent."
+    fix_hint: "Have student log in to student portal and toggle Institutional Verification Consent to Active."
+
+  DUPLICATE_IN_BATCH:
+    plain_reason: "This student appears multiple times in the uploaded institutional spreadsheet."
+    benign_explanations:
+      - title: "Duplicate Branch Transfer Row"
+        description: "The student applied for an internal branch change and both the former and new branch rosters were exported."
+      - title: "Multi-Round Counseling Export"
+        description: "Applicant was listed under both provisional allotment and confirmed admission lists in the SIS export."
+    fix_hint: "Remove duplicate row, keeping only the final confirmed admission quota and programme entry."
+
+  DUPLICATE_CROSS_INSTITUTION:
+    plain_reason: "Student is recorded as concurrently enrolled at another AICTE-approved institution with overlapping active tenure."
+    benign_explanations:
+      - title: "Pending Transfer Certificate / Cancellation"
+        description: "Student accepted admission at your institution after surrendering seat elsewhere, but the previous college has not yet processed the portal exit."
+      - title: "Dual Seat Acceptance During Cap Counseling"
+        description: "Candidate held a seat in round 1 and migrated to round 2 without formal online withdrawal acknowledgment."
+    fix_hint: "Request stamped College Leaving Certificate (CLC) or Migration Certificate from previous institution before finalizing enrolment."
+
+  SEAT_CAP_REGULAR:
+    plain_reason: "Regular admission count exceeds the approved regular intake capacity sanctioned by AICTE."
+    benign_explanations:
+      - title: "Supernumerary Students Misclassified as Regular"
+        description: "TFW or EWS candidates were accidentally tagged under Regular category in the registrar upload sheet."
+      - title: "State DTE Additional Allotment Order"
+        description: "State admission authority made special spot round allotments under government court order or mop-up notification."
+    fix_hint: "Reclassify eligible students under appropriate supernumerary quotas (TFW/EWS) or upload state counseling reconciliation memo."
+
+  SEAT_CAP_SUPERNUMERARY:
+    plain_reason: "The number of admissions in this supernumerary category exceeds configured limits."
+    benign_explanations:
+      - title: "Category Tagging Typo"
+        description: "A candidate was marked with code 'EWS' instead of 'General' or 'TFW'."
+      - title: "Carry-Forward or Central Scheme Expansion"
+        description: "Institutional allotment under special central scheme (PMSSS or J&K relief) permitted beyond standard campus quota."
+    fix_hint: "Audit category allotment letters and reclassify mislabeled student rows."
+
+  CONSISTENCY_NATIONALITY_QUOTA:
+    plain_reason: "Declared nationality does not align with the allocated admission quota."
+    benign_explanations:
+      - title: "NRI Sponsored vs Direct NRI"
+        description: "Indian citizen student admitted under NRI-Sponsored category allowed in certain state acts, tagged as NRI quota."
+      - title: "OCI Cardholder Dual Recognition"
+        description: "Student is an Overseas Citizen of India with parity rights for domestic professional education."
+    fix_hint: "Verify passport, OCI card, or valid NRI relationship affidavit; adjust quota column accordingly."
+
+  CONSISTENCY_AGE_RANGE:
+    plain_reason: "Student age at admission is outside the customary range for this programme level."
+    benign_explanations:
+      - title: "Career Reskilling or Mature Student Admission"
+        description: "Legitimate adult learner or industry-sponsored candidate returning for degree completion."
+      - title: "Year of Birth Typo"
+        description: "Century or decade clerical error (e.g. 1924 instead of 2004)."
+    fix_hint: "Cross-check Date of Birth with secondary school matriculation certificate."
+
+  CONSISTENCY_ADMISSION_DATE:
+    plain_reason: "Admission date is outside the approved institutional academic session window."
+    benign_explanations:
+      - title: "Date Formatting Swap"
+        description: "Month and day were flipped during Excel export (e.g., 08/09 interpreted as Sep 8 instead of Aug 9)."
+      - title: "Late Mop-up Allotment"
+        description: "State High Court or Central Admissions Authority granted institutional extension for mop-up rounds."
+    fix_hint: "Verify exact date on institutional fee receipt and format as YYYY-MM-DD."
+
+  ANOMALY_DOB_CLUSTER:
+    plain_reason: "A statistically anomalous cluster of students in this batch share the identical date of birth (01-Jan)."
+    benign_explanations:
+      - title: "Default Date in Legacy Rural Records"
+        description: "Older rural municipal or school records recorded 01-Jan as an administrative convention when the exact day was unknown."
+      - title: "ERP Default Value Artifact"
+        description: "Campus ERP system auto-filled missing date fields with January 1st during bulk migration."
+    fix_hint: "Review physical matriculation certificates for affected students and update records with genuine birth dates where available."
+
+  ANOMALY_NRI_FN_SPIKE:
+    plain_reason: "The proportion of NRI and Foreign National admissions is significantly higher than statistical norms."
+    benign_explanations:
+      - title: "Bilateral Cultural Exchange Programme"
+        description: "Institution participates in an approved MEA or ICCR study-in-India scholarship programme."
+      - title: "Specialized International Curriculum"
+        description: "Specific campus wing designated for international twinning or transnational degree partnerships."
+    fix_hint: "Provide AICTE MoU approval reference or ICCR allotment list in submission notes."
+
+  DEFAULT:
+    plain_reason: "Data entry discrepancy flagged during automated validation."
+    benign_explanations:
+      - title: "Clerical Entry Typo"
+        description: "Inadvertent typographical discrepancy during data consolidation from student records."
+    fix_hint: "Verify source documents and re-upload the corrected record."

@@ -1,0 +1,20 @@
+# ApaarTrust - Data Retention & Purge Policy
+# Configurable retention horizons (in days) per artifact class
+
+retention_horizons_days:
+  dry_run_submissions: 7       # Uncommitted batch simulations expire in 7 days
+  uncommitted_findings: 14      # Preliminary validation findings for discarded dry runs
+  verification_logs: 180        # Public verification access logs retained for 6 months
+  consent_revoked_grace: 14     # Grace period before hard purging revoked credentials
+  audit_trail: 365              # Cryptographic audit hash entries retained for regulatory compliance audits
+
+purge_policy:
+  authorized_roles: ["Officer"]
+  requires_written_reason: true
+  min_reason_chars: 10
+  soft_delete_default: true
+  documentation: |
+    Automated retention purging permanently cleanses uncommitted simulation batches and
+    stale verification logs beyond the configured threshold. All purge executions require
+    explicit AICTE Officer role authentication, a recorded justification, and append a
+    tamper-evident entry to the SHA-256 hash-chained audit log.

@@ -1,0 +1,937 @@
+[
+  {
+    "student_record_id": null,
+    "id": 1,
+    "rule_id": "SEAT_CAP_REGULAR",
+    "plain_reason": "Regular admissions in B.Tech CSE (148 students) exceed sanctioned intake (120 seats) by 28 seats.",
+    "benign_hypotheses": [
+      {
+        "title": "State Mop-Up Spot Allotment",
+        "description": "State Technical Education Directorate sanctioned additional spot round allotments pending portal update."
+      },
+      {
+        "title": "Misclassified Quota Category",
+        "description": "Certain admitted students belong to EWS or state sponsored quotas but were flagged as Regular."
+      }
+    ],
+    "status": "in_review",
+    "institution_id": "1-1090234567",
+    "row_number": 121,
+    "submission_id": "sub_11090234567_2024_v1",
+    "severity": "high",
+    "evidence": {
+      "programme": "B.Tech Computer Science and Engineering",
+      "approved_intake": 120,
+      "actual_regular_admitted": 148,
+      "excess": 28
+    },
+    "fix_hint": "Review admission orders. Reclassify eligible supernumerary students or request intake regularization.",
+    "created_at": "2026-10-28T06:46:57.364175Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 2,
+    "rule_id": "SEAT_CAP_SUPERNUMERARY",
+    "plain_reason": "TFW quota admissions (14 students) exceed maximum 5% supernumerary ceiling (6 seats) by 8 seats.",
+    "benign_hypotheses": [
+      {
+        "title": "Category Code Entry Slip",
+        "description": "Economically Weaker Section (EWS) or general scholarship students mistakenly marked with TFW quota code."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090234567",
+    "row_number": 135,
+    "submission_id": "sub_11090234567_2024_v1",
+    "severity": "high",
+    "evidence": {
+      "programme": "B.Tech Computer Science and Engineering",
+      "category": "TFW",
+      "max_allowed": 6,
+      "actual_admitted": 14,
+      "excess": 8
+    },
+    "fix_hint": "Verify state counseling allotment letters and correct candidate category to EWS or General.",
+    "created_at": "2026-10-28T06:46:57.364423Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 3,
+    "rule_id": "DUPLICATE_CROSS_INSTITUTION",
+    "plain_reason": "Student concurrently enrolled at another AICTE-approved institution with overlapping active tenure.",
+    "benign_hypotheses": [
+      {
+        "title": "Pending Transfer Certificate",
+        "description": "Candidate migrated from earlier institution without former college issuing formal online exit slip."
+      },
+      {
+        "title": "Seat Holding During State Counseling",
+        "description": "Candidate secured round 1 seat and upgraded in round 2 without cancellation acknowledgment."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090345678",
+    "row_number": 88,
+    "submission_id": "sub_11090345678_2024_v1",
+    "severity": "critical",
+    "evidence": {
+      "apaar_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+      "apaar_masked": "XXXX-XXXX-1100",
+      "match_score": 10,
+      "conflicting_institution_id": "1-1090123456",
+      "conflicting_institution_name": "Aryabhata Institute of Technology",
+      "conflicting_programme": "B.Tech Computer Science and Engineering",
+      "overlap_academic_year": "2024-25",
+      "evidence_breakdown": "Deterministic match: same HMAC-SHA256 APAAR token (+10.0), matching DOB (+4.1)."
+    },
+    "fix_hint": "Collect stamped Transfer / Migration Certificate from candidate's previous college.",
+    "created_at": "2026-10-28T06:46:57.615277Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 4,
+    "rule_id": "APAAR_FORMAT",
+    "plain_reason": "APAAR ID must contain exactly 12 numeric digits.",
+    "benign_hypotheses": [
+      {
+        "title": "Leading Zero Dropped",
+        "description": "Spreadsheet cell formatting stripped leading zeroes."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 1,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "critical",
+    "evidence": {
+      "submitted_apaar_masked": "XXXX-XXXX-3021",
+      "length": 9
+    },
+    "fix_hint": "Format column as Text and re-enter 12-digit number.",
+    "created_at": "2026-10-28T06:46:57.736154Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 5,
+    "rule_id": "APAAR_FORMAT",
+    "plain_reason": "APAAR ID must contain exactly 12 numeric digits.",
+    "benign_hypotheses": [
+      {
+        "title": "Leading Zero Dropped",
+        "description": "Spreadsheet cell formatting stripped leading zeroes."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 2,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "critical",
+    "evidence": {
+      "submitted_apaar_masked": "XXXX-XXXX-2799",
+      "length": 9
+    },
+    "fix_hint": "Format column as Text and re-enter 12-digit number.",
+    "created_at": "2026-10-28T06:46:57.736860Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 6,
+    "rule_id": "APAAR_FORMAT",
+    "plain_reason": "APAAR ID must contain exactly 12 numeric digits.",
+    "benign_hypotheses": [
+      {
+        "title": "Leading Zero Dropped",
+        "description": "Spreadsheet cell formatting stripped leading zeroes."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 3,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "critical",
+    "evidence": {
+      "submitted_apaar_masked": "XXXX-XXXX-9962",
+      "length": 9
+    },
+    "fix_hint": "Format column as Text and re-enter 12-digit number.",
+    "created_at": "2026-10-28T06:46:57.737484Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 7,
+    "rule_id": "APAAR_FORMAT",
+    "plain_reason": "APAAR ID must contain exactly 12 numeric digits.",
+    "benign_hypotheses": [
+      {
+        "title": "Leading Zero Dropped",
+        "description": "Spreadsheet cell formatting stripped leading zeroes."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 4,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "critical",
+    "evidence": {
+      "submitted_apaar_masked": "XXXX-XXXX-7037",
+      "length": 9
+    },
+    "fix_hint": "Format column as Text and re-enter 12-digit number.",
+    "created_at": "2026-10-28T06:46:57.738146Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 8,
+    "rule_id": "REGISTRY_LOOKUP",
+    "plain_reason": "APAAR ID not registered in Central APAAR Registry.",
+    "benign_hypotheses": [
+      {
+        "title": "Sync Delay",
+        "description": "Freshly generated APAAR ID pending central index replication."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 5,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "critical",
+    "evidence": {
+      "apaar_masked": "XXXX-XXXX-8341"
+    },
+    "fix_hint": "Obtain DigiLocker PDF verification slip from student.",
+    "created_at": "2026-10-28T06:46:57.739309Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 9,
+    "rule_id": "REGISTRY_LOOKUP",
+    "plain_reason": "APAAR ID not registered in Central APAAR Registry.",
+    "benign_hypotheses": [
+      {
+        "title": "Sync Delay",
+        "description": "Freshly generated APAAR ID pending central index replication."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 6,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "critical",
+    "evidence": {
+      "apaar_masked": "XXXX-XXXX-0590"
+    },
+    "fix_hint": "Obtain DigiLocker PDF verification slip from student.",
+    "created_at": "2026-10-28T06:46:57.739995Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 10,
+    "rule_id": "REGISTRY_LOOKUP",
+    "plain_reason": "APAAR ID not registered in Central APAAR Registry.",
+    "benign_hypotheses": [
+      {
+        "title": "Sync Delay",
+        "description": "Freshly generated APAAR ID pending central index replication."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 7,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "critical",
+    "evidence": {
+      "apaar_masked": "XXXX-XXXX-0167"
+    },
+    "fix_hint": "Obtain DigiLocker PDF verification slip from student.",
+    "created_at": "2026-10-28T06:46:57.740667Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 11,
+    "rule_id": "REGISTRY_LOOKUP",
+    "plain_reason": "APAAR ID not registered in Central APAAR Registry.",
+    "benign_hypotheses": [
+      {
+        "title": "Sync Delay",
+        "description": "Freshly generated APAAR ID pending central index replication."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 8,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "critical",
+    "evidence": {
+      "apaar_masked": "XXXX-XXXX-6727"
+    },
+    "fix_hint": "Obtain DigiLocker PDF verification slip from student.",
+    "created_at": "2026-10-28T06:46:57.741130Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 12,
+    "rule_id": "REGISTRY_LOOKUP",
+    "plain_reason": "APAAR ID not registered in Central APAAR Registry.",
+    "benign_hypotheses": [
+      {
+        "title": "Sync Delay",
+        "description": "Freshly generated APAAR ID pending central index replication."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 9,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "critical",
+    "evidence": {
+      "apaar_masked": "XXXX-XXXX-3644"
+    },
+    "fix_hint": "Obtain DigiLocker PDF verification slip from student.",
+    "created_at": "2026-10-28T06:46:57.741506Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 13,
+    "rule_id": "REGISTRY_LOOKUP",
+    "plain_reason": "APAAR ID not registered in Central APAAR Registry.",
+    "benign_hypotheses": [
+      {
+        "title": "Sync Delay",
+        "description": "Freshly generated APAAR ID pending central index replication."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 10,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "critical",
+    "evidence": {
+      "apaar_masked": "XXXX-XXXX-6964"
+    },
+    "fix_hint": "Obtain DigiLocker PDF verification slip from student.",
+    "created_at": "2026-10-28T06:46:57.741887Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 14,
+    "rule_id": "REGISTRY_LOOKUP",
+    "plain_reason": "APAAR ID has been suspended by issuing authority.",
+    "benign_hypotheses": [
+      {
+        "title": "Aadhaar e-KYC Resubmission",
+        "description": "Student biometric update flagged pending re-verification."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 11,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "high",
+    "evidence": {
+      "apaar_masked": "XXXX-XXXX-3586",
+      "registry_status": "suspended"
+    },
+    "fix_hint": "Advise candidate to visit local Aadhaar/DigiLocker Seva Kendra to reactivate profile.",
+    "created_at": "2026-10-28T06:46:57.742240Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 15,
+    "rule_id": "REGISTRY_LOOKUP",
+    "plain_reason": "APAAR ID has been suspended by issuing authority.",
+    "benign_hypotheses": [
+      {
+        "title": "Aadhaar e-KYC Resubmission",
+        "description": "Student biometric update flagged pending re-verification."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 12,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "high",
+    "evidence": {
+      "apaar_masked": "XXXX-XXXX-8061",
+      "registry_status": "suspended"
+    },
+    "fix_hint": "Advise candidate to visit local Aadhaar/DigiLocker Seva Kendra to reactivate profile.",
+    "created_at": "2026-10-28T06:46:57.742701Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 16,
+    "rule_id": "REGISTRY_LOOKUP",
+    "plain_reason": "APAAR ID has been suspended by issuing authority.",
+    "benign_hypotheses": [
+      {
+        "title": "Aadhaar e-KYC Resubmission",
+        "description": "Student biometric update flagged pending re-verification."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 13,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "high",
+    "evidence": {
+      "apaar_masked": "XXXX-XXXX-7037",
+      "registry_status": "suspended"
+    },
+    "fix_hint": "Advise candidate to visit local Aadhaar/DigiLocker Seva Kendra to reactivate profile.",
+    "created_at": "2026-10-28T06:46:57.743156Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 17,
+    "rule_id": "REGISTRY_LOOKUP",
+    "plain_reason": "APAAR ID has been suspended by issuing authority.",
+    "benign_hypotheses": [
+      {
+        "title": "Aadhaar e-KYC Resubmission",
+        "description": "Student biometric update flagged pending re-verification."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 14,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "high",
+    "evidence": {
+      "apaar_masked": "XXXX-XXXX-8796",
+      "registry_status": "suspended"
+    },
+    "fix_hint": "Advise candidate to visit local Aadhaar/DigiLocker Seva Kendra to reactivate profile.",
+    "created_at": "2026-10-28T06:46:57.743603Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 18,
+    "rule_id": "REGISTRY_MISMATCH_NAME",
+    "plain_reason": "Student name differs from registered APAAR legal name.",
+    "benign_hypotheses": [
+      {
+        "title": "Honorific Prefix Inclusion",
+        "description": "Registry profile contains traditional prefixes or expanded patronymics."
+      },
+      {
+        "title": "School Certificate Abbreviation",
+        "description": "High school marksheet condensed surname or initials."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 15,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "high",
+    "evidence": {
+      "submitted_name": "Ira Sachdev",
+      "registry_name": "Shriman Ira Sachdev Verma",
+      "similarity": 0.68
+    },
+    "fix_hint": "Match name to 10th standard matriculation certificate.",
+    "created_at": "2026-10-28T06:46:57.744050Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 19,
+    "rule_id": "REGISTRY_MISMATCH_NAME",
+    "plain_reason": "Student name differs from registered APAAR legal name.",
+    "benign_hypotheses": [
+      {
+        "title": "Honorific Prefix Inclusion",
+        "description": "Registry profile contains traditional prefixes or expanded patronymics."
+      },
+      {
+        "title": "School Certificate Abbreviation",
+        "description": "High school marksheet condensed surname or initials."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 16,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "high",
+    "evidence": {
+      "submitted_name": "Irya Nayar",
+      "registry_name": "Shriman Irya Nayar Verma",
+      "similarity": 0.68
+    },
+    "fix_hint": "Match name to 10th standard matriculation certificate.",
+    "created_at": "2026-10-28T06:46:57.744516Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 20,
+    "rule_id": "REGISTRY_MISMATCH_NAME",
+    "plain_reason": "Student name differs from registered APAAR legal name.",
+    "benign_hypotheses": [
+      {
+        "title": "Honorific Prefix Inclusion",
+        "description": "Registry profile contains traditional prefixes or expanded patronymics."
+      },
+      {
+        "title": "School Certificate Abbreviation",
+        "description": "High school marksheet condensed surname or initials."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 17,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "high",
+    "evidence": {
+      "submitted_name": "Mohammed Gour",
+      "registry_name": "Shriman Mohammed Gour Verma",
+      "similarity": 0.68
+    },
+    "fix_hint": "Match name to 10th standard matriculation certificate.",
+    "created_at": "2026-10-28T06:46:57.746533Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 21,
+    "rule_id": "REGISTRY_MISMATCH_NAME",
+    "plain_reason": "Student name differs from registered APAAR legal name.",
+    "benign_hypotheses": [
+      {
+        "title": "Honorific Prefix Inclusion",
+        "description": "Registry profile contains traditional prefixes or expanded patronymics."
+      },
+      {
+        "title": "School Certificate Abbreviation",
+        "description": "High school marksheet condensed surname or initials."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 18,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "high",
+    "evidence": {
+      "submitted_name": "Tejas Misra",
+      "registry_name": "Shriman Tejas Misra Verma",
+      "similarity": 0.68
+    },
+    "fix_hint": "Match name to 10th standard matriculation certificate.",
+    "created_at": "2026-10-28T06:46:57.747217Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 22,
+    "rule_id": "REGISTRY_MISMATCH_NAME",
+    "plain_reason": "Student name differs from registered APAAR legal name.",
+    "benign_hypotheses": [
+      {
+        "title": "Honorific Prefix Inclusion",
+        "description": "Registry profile contains traditional prefixes or expanded patronymics."
+      },
+      {
+        "title": "School Certificate Abbreviation",
+        "description": "High school marksheet condensed surname or initials."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 19,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "high",
+    "evidence": {
+      "submitted_name": "Andrew Vig",
+      "registry_name": "Shriman Andrew Vig Verma",
+      "similarity": 0.68
+    },
+    "fix_hint": "Match name to 10th standard matriculation certificate.",
+    "created_at": "2026-10-28T06:46:57.747906Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 23,
+    "rule_id": "REGISTRY_MISMATCH_NAME",
+    "plain_reason": "Student name differs from registered APAAR legal name.",
+    "benign_hypotheses": [
+      {
+        "title": "Honorific Prefix Inclusion",
+        "description": "Registry profile contains traditional prefixes or expanded patronymics."
+      },
+      {
+        "title": "School Certificate Abbreviation",
+        "description": "High school marksheet condensed surname or initials."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 20,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "high",
+    "evidence": {
+      "submitted_name": "Zinal Ravel",
+      "registry_name": "Shriman Zinal Ravel Verma",
+      "similarity": 0.68
+    },
+    "fix_hint": "Match name to 10th standard matriculation certificate.",
+    "created_at": "2026-10-28T06:46:57.748681Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 24,
+    "rule_id": "REGISTRY_MISMATCH_NAME",
+    "plain_reason": "Student name differs from registered APAAR legal name.",
+    "benign_hypotheses": [
+      {
+        "title": "Honorific Prefix Inclusion",
+        "description": "Registry profile contains traditional prefixes or expanded patronymics."
+      },
+      {
+        "title": "School Certificate Abbreviation",
+        "description": "High school marksheet condensed surname or initials."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 21,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "high",
+    "evidence": {
+      "submitted_name": "Frederick Cherian",
+      "registry_name": "Shriman Frederick Cherian Verma",
+      "similarity": 0.68
+    },
+    "fix_hint": "Match name to 10th standard matriculation certificate.",
+    "created_at": "2026-10-28T06:46:57.749265Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 25,
+    "rule_id": "REGISTRY_MISMATCH_NAME",
+    "plain_reason": "Student name differs from registered APAAR legal name.",
+    "benign_hypotheses": [
+      {
+        "title": "Honorific Prefix Inclusion",
+        "description": "Registry profile contains traditional prefixes or expanded patronymics."
+      },
+      {
+        "title": "School Certificate Abbreviation",
+        "description": "High school marksheet condensed surname or initials."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 22,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "high",
+    "evidence": {
+      "submitted_name": "Nirja Mital",
+      "registry_name": "Shriman Nirja Mital Verma",
+      "similarity": 0.68
+    },
+    "fix_hint": "Match name to 10th standard matriculation certificate.",
+    "created_at": "2026-10-28T06:46:57.749831Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 26,
+    "rule_id": "REGISTRY_MISMATCH_DOB",
+    "plain_reason": "Submitted Date of Birth differs from APAAR Registry records.",
+    "benign_hypotheses": [
+      {
+        "title": "Month-Day Inversion",
+        "description": "Clerical entry inverted day and month order."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 23,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "high",
+    "evidence": {
+      "submitted_dob": "2004-06-15",
+      "registry_dob": "2002-11-20"
+    },
+    "fix_hint": "Verify with birth certificate or Aadhaar card.",
+    "created_at": "2026-10-28T06:46:57.750391Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 27,
+    "rule_id": "REGISTRY_MISMATCH_DOB",
+    "plain_reason": "Submitted Date of Birth differs from APAAR Registry records.",
+    "benign_hypotheses": [
+      {
+        "title": "Month-Day Inversion",
+        "description": "Clerical entry inverted day and month order."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 24,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "high",
+    "evidence": {
+      "submitted_dob": "2004-06-15",
+      "registry_dob": "2002-11-20"
+    },
+    "fix_hint": "Verify with birth certificate or Aadhaar card.",
+    "created_at": "2026-10-28T06:46:57.750948Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 28,
+    "rule_id": "REGISTRY_MISMATCH_DOB",
+    "plain_reason": "Submitted Date of Birth differs from APAAR Registry records.",
+    "benign_hypotheses": [
+      {
+        "title": "Month-Day Inversion",
+        "description": "Clerical entry inverted day and month order."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 25,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "high",
+    "evidence": {
+      "submitted_dob": "2004-06-15",
+      "registry_dob": "2002-11-20"
+    },
+    "fix_hint": "Verify with birth certificate or Aadhaar card.",
+    "created_at": "2026-10-28T06:46:57.751502Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 29,
+    "rule_id": "REGISTRY_MISMATCH_DOB",
+    "plain_reason": "Submitted Date of Birth differs from APAAR Registry records.",
+    "benign_hypotheses": [
+      {
+        "title": "Month-Day Inversion",
+        "description": "Clerical entry inverted day and month order."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 26,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "high",
+    "evidence": {
+      "submitted_dob": "2004-06-15",
+      "registry_dob": "2002-11-20"
+    },
+    "fix_hint": "Verify with birth certificate or Aadhaar card.",
+    "created_at": "2026-10-28T06:46:57.752059Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 30,
+    "rule_id": "REGISTRY_MISMATCH_DOB",
+    "plain_reason": "Submitted Date of Birth differs from APAAR Registry records.",
+    "benign_hypotheses": [
+      {
+        "title": "Month-Day Inversion",
+        "description": "Clerical entry inverted day and month order."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 27,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "high",
+    "evidence": {
+      "submitted_dob": "2004-06-15",
+      "registry_dob": "2002-11-20"
+    },
+    "fix_hint": "Verify with birth certificate or Aadhaar card.",
+    "created_at": "2026-10-28T06:46:57.752616Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 31,
+    "rule_id": "REGISTRY_MISMATCH_DOB",
+    "plain_reason": "Submitted Date of Birth differs from APAAR Registry records.",
+    "benign_hypotheses": [
+      {
+        "title": "Month-Day Inversion",
+        "description": "Clerical entry inverted day and month order."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 28,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "high",
+    "evidence": {
+      "submitted_dob": "2004-06-15",
+      "registry_dob": "2002-11-20"
+    },
+    "fix_hint": "Verify with birth certificate or Aadhaar card.",
+    "created_at": "2026-10-28T06:46:57.753174Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 32,
+    "rule_id": "REGISTRY_CONSENT_MISSING",
+    "plain_reason": "Citizen consent flag inactive for institutional data access.",
+    "benign_hypotheses": [
+      {
+        "title": "Pending Student OTP",
+        "description": "Student has not yet completed DigiLocker consent authorization."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 29,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "medium",
+    "evidence": {
+      "apaar_masked": "XXXX-XXXX-3077",
+      "consent_flag": false
+    },
+    "fix_hint": "Instruct student to grant e-consent via APAAR student portal.",
+    "created_at": "2026-10-28T06:46:57.753782Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 33,
+    "rule_id": "REGISTRY_CONSENT_MISSING",
+    "plain_reason": "Citizen consent flag inactive for institutional data access.",
+    "benign_hypotheses": [
+      {
+        "title": "Pending Student OTP",
+        "description": "Student has not yet completed DigiLocker consent authorization."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 30,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "medium",
+    "evidence": {
+      "apaar_masked": "XXXX-XXXX-3571",
+      "consent_flag": false
+    },
+    "fix_hint": "Instruct student to grant e-consent via APAAR student portal.",
+    "created_at": "2026-10-28T06:46:57.754311Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 34,
+    "rule_id": "REGISTRY_CONSENT_MISSING",
+    "plain_reason": "Citizen consent flag inactive for institutional data access.",
+    "benign_hypotheses": [
+      {
+        "title": "Pending Student OTP",
+        "description": "Student has not yet completed DigiLocker consent authorization."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 31,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "medium",
+    "evidence": {
+      "apaar_masked": "XXXX-XXXX-3368",
+      "consent_flag": false
+    },
+    "fix_hint": "Instruct student to grant e-consent via APAAR student portal.",
+    "created_at": "2026-10-28T06:46:57.754764Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 35,
+    "rule_id": "REGISTRY_CONSENT_MISSING",
+    "plain_reason": "Citizen consent flag inactive for institutional data access.",
+    "benign_hypotheses": [
+      {
+        "title": "Pending Student OTP",
+        "description": "Student has not yet completed DigiLocker consent authorization."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090456789",
+    "row_number": 32,
+    "submission_id": "sub_11090456789_2024_v1",
+    "severity": "medium",
+    "evidence": {
+      "apaar_masked": "XXXX-XXXX-3352",
+      "consent_flag": false
+    },
+    "fix_hint": "Instruct student to grant e-consent via APAAR student portal.",
+    "created_at": "2026-10-28T06:46:57.755285Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 36,
+    "rule_id": "ANOMALY_DOB_CLUSTER",
+    "plain_reason": "Statistically abnormal cluster: 55+ students in this cohort have date of birth 01-Jan.",
+    "benign_hypotheses": [
+      {
+        "title": "Rural Birth Registration Convention",
+        "description": "Historically, candidates from rural school certificates had Jan 01 entered when exact date was unknown."
+      },
+      {
+        "title": "ERP Default Field Artifact",
+        "description": "Institutional database migration defaulted null birth dates to January 1st."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090567890",
+    "row_number": 1,
+    "submission_id": "sub_11090567890_2024_v1",
+    "severity": "medium",
+    "evidence": {
+      "date_cluster": "01-01",
+      "student_count": 58,
+      "concentration_percentage": 26.4
+    },
+    "fix_hint": "Cross-reference original matriculation certificate and update exact birth dates.",
+    "created_at": "2026-10-28T06:46:58.126250Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 37,
+    "rule_id": "ANOMALY_NRI_FN_SPIKE",
+    "plain_reason": "High NRI/Foreign National quota concentration: 55 out of 220 students (25.0%) exceeds 15% norm.",
+    "benign_hypotheses": [
+      {
+        "title": "MEA / ICCR Scholarship Scheme",
+        "description": "Institution participates in Ministry of External Affairs Study in India program."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090567890",
+    "row_number": 2,
+    "submission_id": "sub_11090567890_2024_v1",
+    "severity": "medium",
+    "evidence": {
+      "nri_fn_count": 55,
+      "total_admitted": 220,
+      "percentage": 25,
+      "threshold_pct": 15
+    },
+    "fix_hint": "Attach AICTE international student approval endorsement memo.",
+    "created_at": "2026-10-28T06:46:58.126370Z"
+  },
+  {
+    "student_record_id": null,
+    "id": 38,
+    "rule_id": "CONSISTENCY_AGE_RANGE",
+    "plain_reason": "Student age at undergraduate admission (age 76 or age 5) is outside customary age norms.",
+    "benign_hypotheses": [
+      {
+        "title": "Birth Year Typo",
+        "description": "Year 1948 entered instead of 2004."
+      }
+    ],
+    "status": "open",
+    "institution_id": "1-1090567890",
+    "row_number": 1,
+    "submission_id": "sub_11090567890_2024_v1",
+    "severity": "low",
+    "evidence": {
+      "student_roll": "EEA-B.T-24-001",
+      "dob": "1948-03-10",
+      "calculated_age": 76
+    },
+    "fix_hint": "Check 10th marksheet for correct year of birth.",
+    "created_at": "2026-10-28T06:46:58.126492Z"
+  }
+]

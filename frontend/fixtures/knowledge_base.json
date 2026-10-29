@@ -1,0 +1,1156 @@
+[
+  {
+    "id": "kb_officer_overview",
+    "category": "portals",
+    "roles": [
+      "Officer"
+    ],
+    "question": "How do I use the Officer Overview portal?",
+    "synonyms": [
+      "officer overview",
+      "national dashboard",
+      "state tile map",
+      "scrutiny overview"
+    ],
+    "file_key": "knowledge: portals.officer_overview",
+    "answer": "The Officer Overview portal displays national KPIs, the India Regional Scrutiny Map with 15 state jurisdictions, intake capacity bar charts, and the Needs Your Attention triage queue. Click any state tile to filter monitored institutions by region.",
+    "action_url": "#/officer/overview",
+    "action_label": "Open Overview",
+    "tour_target": "#kpi_institutions"
+  },
+  {
+    "id": "kb_officer_findings",
+    "category": "portals",
+    "roles": [
+      "Officer"
+    ],
+    "question": "How do I triage open findings?",
+    "synonyms": [
+      "triage findings",
+      "findings inbox",
+      "update finding status",
+      "request clarification"
+    ],
+    "file_key": "knowledge: portals.officer_findings",
+    "answer": "Open the Regulatory Findings Triage Inbox to inspect flagged defects. Click 'Inspect & Triage' to review plain reasons, benign hypotheses, and evidence attributes. To transition status to In Review or Resolved, or to dispatch a clarification request to the college, you must provide a written justification of at least 10 characters.",
+    "action_url": "#/officer/findings",
+    "action_label": "Open Findings Inbox",
+    "tour_target": ".btn-inspect-finding"
+  },
+  {
+    "id": "kb_officer_duplicates",
+    "category": "portals",
+    "roles": [
+      "Officer"
+    ],
+    "question": "How do I inspect cross-institution duplicates?",
+    "synonyms": [
+      "duplicate collision",
+      "dual admission",
+      "concurrent enrolment",
+      "side by side comparison"
+    ],
+    "file_key": "knowledge: portals.officer_duplicates",
+    "answer": "The Cross-Institution Duplicates portal flags concurrent full-time admissions across colleges using privacy-preserving cryptographic hashes. Click 'Side-by-side comparison' to inspect both institutions, reveal the unmasked APAAR ID with mandatory justification, or record an adjudication decision (Needs Review, Dismiss, or Refer for Inspection).",
+    "action_url": "#/officer/duplicates",
+    "action_label": "Inspect Duplicates",
+    "tour_target": ".btn-compare-dup"
+  },
+  {
+    "id": "kb_officer_audit",
+    "category": "portals",
+    "roles": [
+      "Officer"
+    ],
+    "question": "How does the cryptographic audit trail work?",
+    "synonyms": [
+      "audit ledger",
+      "verify audit chain",
+      "tamper demo",
+      "restore chain",
+      "hash chain"
+    ],
+    "file_key": "knowledge: portals.officer_audit",
+    "answer": "Every regulatory action, submission commit, and ID reveal is appended to an immutable SQLite ledger chained via SHA-256 parent-child hashes. Use 'Verify integrity' to recalculate hashes, 'Tamper simulation demo' to demonstrate instant tamper detection upon illegal mutations, and 'Restore chain' to recalculate and restore chain continuity.",
+    "action_url": "#/officer/audit",
+    "action_label": "View Audit Trail",
+    "tour_target": "#btnVerifyAudit"
+  },
+  {
+    "id": "kb_officer_compliance_report",
+    "category": "portals",
+    "roles": [
+      "Officer"
+    ],
+    "question": "How do I download an institution compliance report?",
+    "synonyms": [
+      "compliance report pdf",
+      "institution report",
+      "download compliance pdf",
+      "reportlab report"
+    ],
+    "file_key": "knowledge: portals.officer_institution_detail",
+    "answer": "Navigate to the institution's detail page and click 'Download Compliance Report (PDF)'. This generates an official ReportLab regulatory dossier including the approved seat matrix, open validation findings, scrutiny status, and DEMO VALUES indicators.",
+    "action_url": "#/officer/institutions",
+    "action_label": "Browse Institutions"
+  },
+  {
+    "id": "kb_college_upload",
+    "category": "portals",
+    "roles": [
+      "Institution",
+      "Officer"
+    ],
+    "question": "How do I upload and validate an intake spreadsheet?",
+    "synonyms": [
+      "upload data",
+      "intake spreadsheet",
+      "dry run simulation",
+      "upload wizard",
+      "commit batch"
+    ],
+    "file_key": "knowledge: portals.college_upload",
+    "answer": "The College Upload Wizard has 3 steps: 1) Download clean or error templates; 2) Dry-Run Check: Drag and drop your CSV/XLSX or use quick-load chips. No database changes occur during dry-run; 3) Review & Commit: Review flagged findings with GOV.UK links, then commit to generate an immutable version receipt with SHA-256 hash.",
+    "action_url": "#/college/upload",
+    "action_label": "Open Upload Wizard",
+    "tour_target": "#fileDropzone"
+  },
+  {
+    "id": "kb_college_submissions",
+    "category": "portals",
+    "roles": [
+      "Institution",
+      "Officer"
+    ],
+    "question": "How do I inspect submission version diffs and receipts?",
+    "synonyms": [
+      "submission history",
+      "version diff",
+      "batch receipt",
+      "what changed since last upload"
+    ],
+    "file_key": "knowledge: portals.college_submissions",
+    "answer": "The Submissions & Diff page tracks every versioned batch committed by the institution. Click 'View Diff' to see added, removed, or modified student records compared to baseline, click 'Receipt' to view the cryptographic SHA-256 batch receipt, or click 'Errors' to download the findings CSV.",
+    "action_url": "#/college/submissions",
+    "action_label": "View Submissions",
+    "tour_target": ".btn-view-diff"
+  },
+  {
+    "id": "kb_college_todos",
+    "category": "portals",
+    "roles": [
+      "Institution"
+    ],
+    "question": "What should I do if my college has compliance to-dos?",
+    "synonyms": [
+      "compliance to-dos",
+      "fix guide",
+      "fix intake errors",
+      "clarification request from officer"
+    ],
+    "file_key": "knowledge: portals.college_todos",
+    "answer": "The Compliance To-Dos portal outlines actionable steps derived from validation checks. If an AICTE officer requests clarification, it appears here with high priority. Address each item by updating the admission register and re-uploading an updated batch via the Upload Wizard.",
+    "action_url": "#/college/todos",
+    "action_label": "View Compliance To-Dos"
+  },
+  {
+    "id": "kb_college_certificates",
+    "category": "portals",
+    "roles": [
+      "Institution",
+      "Officer"
+    ],
+    "question": "How do I issue verifiable certificates for students?",
+    "synonyms": [
+      "issue certificate",
+      "certificate studio",
+      "sample certificate pdf",
+      "signed qr certificate"
+    ],
+    "file_key": "knowledge: portals.college_certificates",
+    "answer": "In the Enrolled Students Roster or Certificate Studio, click 'Certificate PDF' next to any student. ApaarTrust issues a verifiable credential and renders a downloadable ReportLab Certificate PDF stamped with an Ed25519-signed QR seal containing salted commitments.",
+    "action_url": "#/college/students",
+    "action_label": "Go to Students Roster"
+  },
+  {
+    "id": "kb_student_record",
+    "category": "portals",
+    "roles": [
+      "Student"
+    ],
+    "question": "What is my DigiLocker-style Digital Student ID?",
+    "synonyms": [
+      "digital student id",
+      "digilocker id card",
+      "student record",
+      "masked apaar"
+    ],
+    "file_key": "knowledge: portals.student_record",
+    "answer": "Your Digital Student ID represents your authenticated academic identity secured by AICTE ApaarTrust. It displays your masked APAAR ID (XXXX-XXXX-1098), enrolled institution, programme, admission quota, and active enrolment status.",
+    "action_url": "#/student/record",
+    "action_label": "View My ID Card"
+  },
+  {
+    "id": "kb_student_consent",
+    "category": "portals",
+    "roles": [
+      "Student"
+    ],
+    "question": "How do I manage or revoke verification consent?",
+    "synonyms": [
+      "manage consent",
+      "revoke consent",
+      "consent ledger",
+      "grant consent",
+      "purpose validity"
+    ],
+    "file_key": "knowledge: portals.student_consent",
+    "answer": "The Consent Management Ledger allows sovereign control over your data. You can grant consent per purpose (e.g., Campus Placement, Bank Loan) and choose which fields to disclose. You can revoke any grant at any time with one click, immediately invalidating verification for that recipient.",
+    "action_url": "#/student/consent",
+    "action_label": "Open Consent Ledger",
+    "tour_target": "#btn-revoke-all"
+  },
+  {
+    "id": "kb_student_share",
+    "category": "portals",
+    "roles": [
+      "Student"
+    ],
+    "question": "How does the Zero-Exposure Credential Share simulator work?",
+    "synonyms": [
+      "share credential",
+      "zero exposure simulator",
+      "selective disclosure presentation",
+      "qr share"
+    ],
+    "file_key": "knowledge: portals.student_share",
+    "answer": "The Share Credential simulator generates SD-JWT-inspired presentations with selective disclosure. Toggle sensitive attributes (like Date of Birth or Social Category) on or off. The live simulator proves that third-party verifiers can authenticate your genuine student status while withheld attributes remain completely zero-exposure.",
+    "action_url": "#/student/share",
+    "action_label": "Share Credential",
+    "tour_target": "#btn-generate-presentation"
+  },
+  {
+    "id": "kb_student_activity",
+    "category": "portals",
+    "roles": [
+      "Student"
+    ],
+    "question": "Who can see my data and verification activity?",
+    "synonyms": [
+      "who viewed my record",
+      "access log",
+      "verification audit",
+      "zero secret queries"
+    ],
+    "file_key": "knowledge: portals.student_activity",
+    "answer": "The 'Who Viewed My Record' page maintains an immutable audit trail of every third-party verification attempt. In compliance with DPDP principles, there are zero secret queries: each attempt logs the timestamp, verifier identity, purpose, and precisely which attributes were disclosed or blocked.",
+    "action_url": "#/student/activity",
+    "action_label": "Check Activity Log"
+  },
+  {
+    "id": "kb_public_verifier",
+    "category": "portals",
+    "roles": [
+      "Public",
+      "Student",
+      "Officer",
+      "Institution"
+    ],
+    "question": "How does the Public Verifier work?",
+    "synonyms": [
+      "public verifier",
+      "verify credential",
+      "scan qr",
+      "upload certificate pdf",
+      "verify code"
+    ],
+    "file_key": "knowledge: portals.public_verify",
+    "answer": "The Public Verifier requires no login. You can paste a presentation code, upload a Certificate PDF or image, or test sample credentials. ApaarTrust verifies the Ed25519 signature seal, matches salted hash commitments, and outputs one of 5 definitive outcomes with clear 'what to do next' guidance.",
+    "action_url": "#/verify",
+    "action_label": "Open Public Verifier"
+  },
+  {
+    "id": "kb_rule_seat_cap_regular",
+    "category": "rules",
+    "roles": [
+      "Officer",
+      "Institution"
+    ],
+    "question": "What is rule SEAT_CAP_REGULAR and how do I fix it?",
+    "synonyms": [
+      "seat_cap_regular",
+      "over intake",
+      "sanctioned regular ceiling",
+      "regular intake exceeded"
+    ],
+    "file_key": "rules/validation_rules.yaml: SEAT_CAP_REGULAR",
+    "answer": "Rule SEAT_CAP_REGULAR triggers when admitted regular student enrolments exceed the approved sanctioned intake ceiling. Fix: Verify enrolment registers against the Approval Process Handbook ceiling and cancel or reassign non-admitted registrations."
+  },
+  {
+    "id": "kb_rule_seat_cap_tfw",
+    "category": "rules",
+    "roles": [
+      "Officer",
+      "Institution"
+    ],
+    "question": "What is the Tuition Fee Waiver (TFW) limit?",
+    "synonyms": [
+      "seat_cap_tfw",
+      "tfw quota",
+      "tuition fee waiver",
+      "tfw percentage"
+    ],
+    "file_key": "rules/seat_rules.yaml: seat_quotas.tfw",
+    "answer": "The Tuition Fee Waiver (TFW) scheme permits up to 5% supernumerary seats over sanctioned intake for meritorious students from economically weaker backgrounds whose parental income is below prescribed thresholds."
+  },
+  {
+    "id": "kb_rule_seat_cap_ews",
+    "category": "rules",
+    "roles": [
+      "Officer",
+      "Institution"
+    ],
+    "question": "What is the Economically Weaker Section (EWS) quota limit?",
+    "synonyms": [
+      "seat_cap_ews",
+      "ews quota",
+      "economically weaker section",
+      "ews percentage"
+    ],
+    "file_key": "rules/seat_rules.yaml: seat_quotas.ews",
+    "answer": "The Economically Weaker Section (EWS) supernumerary allocation permits up to 10% additional seats over the approved regular intake capacity."
+  },
+  {
+    "id": "kb_rule_seat_cap_km",
+    "category": "rules",
+    "roles": [
+      "Officer",
+      "Institution"
+    ],
+    "question": "What is the Kashmiri Migrants (KM) quota limit?",
+    "synonyms": [
+      "seat_cap_km",
+      "kashmiri migrants",
+      "km quota",
+      "km fixed seats"
+    ],
+    "file_key": "rules/seat_rules.yaml: seat_quotas.km",
+    "answer": "The Kashmiri Migrants (KM) quota permits up to 3 fixed supernumerary seats per approved degree course."
+  },
+  {
+    "id": "kb_rule_seat_cap_pmsss",
+    "category": "rules",
+    "roles": [
+      "Officer",
+      "Institution"
+    ],
+    "question": "What is the PMSSS scholarship quota limit?",
+    "synonyms": [
+      "seat_cap_pmsss",
+      "pmsss",
+      "prime minister special scholarship",
+      "pmsss quota"
+    ],
+    "file_key": "rules/seat_rules.yaml: seat_quotas.pmsss",
+    "answer": "The Prime Minister's Special Scholarship Scheme (PMSSS) permits up to 2 fixed supernumerary seats per approved degree programme."
+  },
+  {
+    "id": "kb_rule_seat_cap_nri_fn",
+    "category": "rules",
+    "roles": [
+      "Officer",
+      "Institution"
+    ],
+    "question": "What are the NRI and Foreign National (FN/OCI) quotas?",
+    "synonyms": [
+      "seat_cap_nri_fn",
+      "nri quota",
+      "foreign national",
+      "fn oci",
+      "fn_oci"
+    ],
+    "file_key": "rules/seat_rules.yaml: seat_quotas.nri_and_fn_oci",
+    "answer": "Non-Resident Indian (NRI) allocation is capped at 5% supernumerary intake, and Foreign Nationals / Overseas Citizens of India (FN/OCI) is capped at 15% supernumerary intake."
+  },
+  {
+    "id": "kb_rule_seat_cap_lateral",
+    "category": "rules",
+    "roles": [
+      "Officer",
+      "Institution"
+    ],
+    "question": "What is the Lateral Entry quota ceiling?",
+    "synonyms": [
+      "lateral entry",
+      "diploma entry",
+      "seat_cap_lateral"
+    ],
+    "file_key": "rules/seat_rules.yaml: seat_quotas.lateral_entry",
+    "answer": "Lateral Entry into the second year for polytechnic diploma and B.Sc graduates is permitted up to 10% of the sanctioned regular intake capacity."
+  },
+  {
+    "id": "kb_rule_duplicate_cross",
+    "category": "rules",
+    "roles": [
+      "Officer",
+      "Institution"
+    ],
+    "question": "What is DUPLICATE_CROSS_INSTITUTION and how is it resolved?",
+    "synonyms": [
+      "duplicate_cross_institution",
+      "concurrent enrolment",
+      "cross college duplicate",
+      "dual admission"
+    ],
+    "file_key": "rules/validation_rules.yaml: DUPLICATE_CROSS_INSTITUTION",
+    "answer": "DUPLICATE_CROSS_INSTITUTION flags a student enrolled full-time in two different AICTE institutions in the same academic session. Benign hypothesis: student shifted colleges without formal cancellation. Fix: obtain College Leaving Certificate (CLC) from prior college and submit to regional AICTE officer."
+  },
+  {
+    "id": "kb_rule_duplicate_batch",
+    "category": "rules",
+    "roles": [
+      "Officer",
+      "Institution"
+    ],
+    "question": "What is DUPLICATE_IN_BATCH and how do I fix it?",
+    "synonyms": [
+      "duplicate_in_batch",
+      "same file duplicate",
+      "intra-batch duplicate"
+    ],
+    "file_key": "rules/validation_rules.yaml: DUPLICATE_IN_BATCH",
+    "answer": "DUPLICATE_IN_BATCH flags the same APAAR ID appearing more than once in the same uploaded spreadsheet. Fix: remove duplicate rows from the spreadsheet and re-run dry-run simulation."
+  },
+  {
+    "id": "kb_rule_apaar_format",
+    "category": "rules",
+    "roles": [
+      "Officer",
+      "Institution"
+    ],
+    "question": "What is rule APAAR_FORMAT?",
+    "synonyms": [
+      "apaar_format",
+      "12-digit format",
+      "invalid apaar id",
+      "malformed apaar"
+    ],
+    "file_key": "rules/validation_rules.yaml: APAAR_FORMAT",
+    "answer": "Rule APAAR_FORMAT checks that the APAAR ID consists of exactly 12 numeric digits without alphabetic characters or invalid length. Fix: check student admission records against DigiLocker or Academic Bank of Credits."
+  },
+  {
+    "id": "kb_rule_name_mismatch",
+    "category": "rules",
+    "roles": [
+      "Officer",
+      "Institution"
+    ],
+    "question": "What is REGISTRY_MISMATCH_NAME and what is the threshold?",
+    "synonyms": [
+      "registry_mismatch_name",
+      "name mismatch",
+      "spelling discrepancy",
+      "name similarity"
+    ],
+    "file_key": "rules/validation_rules.yaml: REGISTRY_MISMATCH_NAME",
+    "answer": "REGISTRY_MISMATCH_NAME evaluates phonetic and token similarity between the uploaded name and Central APAAR Registry records (threshold 0.82). Benign hypothesis: expansion of initials or cultural naming conventions. Fix: provide 10th standard certificate or Aadhaar update receipt."
+  },
+  {
+    "id": "kb_rule_dob_mismatch",
+    "category": "rules",
+    "roles": [
+      "Officer",
+      "Institution"
+    ],
+    "question": "What is REGISTRY_MISMATCH_DOB?",
+    "synonyms": [
+      "registry_mismatch_dob",
+      "dob mismatch",
+      "birth date mismatch"
+    ],
+    "file_key": "rules/validation_rules.yaml: REGISTRY_MISMATCH_DOB",
+    "answer": "REGISTRY_MISMATCH_DOB detects discrepancies between the uploaded date of birth and Central APAAR Registry records. Fix: verify against matriculation certificate or birth registration certificate."
+  },
+  {
+    "id": "kb_rule_dob_cluster",
+    "category": "rules",
+    "roles": [
+      "Officer",
+      "Institution"
+    ],
+    "question": "What is ANOMALY_DOB_CLUSTER?",
+    "synonyms": [
+      "anomaly_dob_cluster",
+      "01-jan cluster",
+      "january 1 default",
+      "dob clustering"
+    ],
+    "file_key": "rules/validation_rules.yaml: ANOMALY_DOB_CLUSTER",
+    "answer": "ANOMALY_DOB_CLUSTER detects synthetic or placeholder dates of birth when more than 15% of a batch share the exact same birthday (e.g. 01-Jan default placeholders). Fix: require students to submit actual verified birth certificates."
+  },
+  {
+    "id": "kb_rule_gender_ratio",
+    "category": "rules",
+    "roles": [
+      "Officer",
+      "Institution"
+    ],
+    "question": "What is ANOMALY_GENDER_RATIO?",
+    "synonyms": [
+      "anomaly_gender_ratio",
+      "gender anomaly",
+      "statistical outlier gender"
+    ],
+    "file_key": "rules/validation_rules.yaml: ANOMALY_GENDER_RATIO",
+    "answer": "ANOMALY_GENDER_RATIO flags batches with extreme statistical skew (e.g. 98% single gender without women's college exemption). Benign hypothesis: specialized single-gender residential institution. Fix: attach state women's institution approval order."
+  },
+  {
+    "id": "kb_rule_invalid_quota",
+    "category": "rules",
+    "roles": [
+      "Officer",
+      "Institution"
+    ],
+    "question": "What is INVALID_AFFIRMATIVE_ACTION?",
+    "synonyms": [
+      "invalid_affirmative_action",
+      "quota mismatch",
+      "category certificate"
+    ],
+    "file_key": "rules/validation_rules.yaml: INVALID_AFFIRMATIVE_ACTION",
+    "answer": "INVALID_AFFIRMATIVE_ACTION flags reservation category admissions lacking verified digital caste or income certificates. Fix: verify competent authority certificate prior to official commitment."
+  },
+  {
+    "id": "kb_concept_apaar",
+    "category": "glossary",
+    "roles": [
+      "Officer",
+      "Institution",
+      "Student",
+      "Public"
+    ],
+    "question": "What is APAAR?",
+    "synonyms": [
+      "what is apaar",
+      "automated permanent academic account registry",
+      "abc id",
+      "12 digit apaar"
+    ],
+    "file_key": "glossary: apaar",
+    "answer": "APAAR (Automated Permanent Academic Account Registry) is a 12-digit lifelong unique digital academic ID issued under the Academic Bank of Credits (ABC) by the Ministry of Education, Government of India."
+  },
+  {
+    "id": "kb_concept_sdjwt",
+    "category": "glossary",
+    "roles": [
+      "Officer",
+      "Institution",
+      "Student",
+      "Public"
+    ],
+    "question": "What is SD-JWT selective disclosure?",
+    "synonyms": [
+      "sd-jwt",
+      "selective disclosure",
+      "zero-exposure",
+      "salted commitment"
+    ],
+    "file_key": "glossary: privacy_sdjwt",
+    "answer": "SD-JWT (Selective Disclosure JSON Web Token) is a cryptographic architecture where each student attribute (programme, name, DOB) is independently hashed with a random salt: sha256(salt:claim). Third parties can verify authenticity without learning withheld attributes."
+  },
+  {
+    "id": "kb_concept_dry_run",
+    "category": "glossary",
+    "roles": [
+      "Officer",
+      "Institution"
+    ],
+    "question": "What is dry run simulation?",
+    "synonyms": [
+      "dry run",
+      "pre-flight check",
+      "simulation check",
+      "draft file check"
+    ],
+    "file_key": "glossary: dry_run",
+    "answer": "Dry-run simulation is an offline pre-flight check that executes all 14 validation rules on draft spreadsheets without modifying the central database, allowing institutions to fix errors before committing."
+  },
+  {
+    "id": "kb_concept_ed25519",
+    "category": "glossary",
+    "roles": [
+      "Officer",
+      "Institution",
+      "Student",
+      "Public"
+    ],
+    "question": "What cryptographic signature is used for credentials?",
+    "synonyms": [
+      "ed25519",
+      "digital signature",
+      "cryptographic seal",
+      "tamper evident seal"
+    ],
+    "file_key": "glossary: ed25519",
+    "answer": "Credentials and presentations are signed using high-speed, tamper-proof Ed25519 elliptic curve digital signatures. Any bit flip in the credential payload breaks mathematical verification immediately."
+  },
+  {
+    "id": "kb_concept_audit_chain",
+    "category": "glossary",
+    "roles": [
+      "Officer"
+    ],
+    "question": "How is the audit trail secured?",
+    "synonyms": [
+      "sha256 hash chaining",
+      "audit trail security",
+      "blockchain style ledger",
+      "parent hash"
+    ],
+    "file_key": "glossary: audit_chain",
+    "answer": "The audit trail uses SHA-256 parent-child hash chaining. Each event includes the hash of the preceding entry: sha256(prev_hash:timestamp:actor:action:payload). Mutating any historical row breaks the entire cryptographic chain."
+  },
+  {
+    "id": "kb_concept_retention",
+    "category": "glossary",
+    "roles": [
+      "Officer",
+      "Institution"
+    ],
+    "question": "What are the data retention horizons?",
+    "synonyms": [
+      "retention horizon",
+      "data purge",
+      "retention period",
+      "how long data is kept"
+    ],
+    "file_key": "rules/retention.yaml: retention_horizons_days",
+    "answer": "Configured retention periods: Dry-run temporary submissions: 7 days; Uncommitted findings: 14 days; Verification access logs: 180 days; Cryptographic audit trail: 365 days. Data purges require officer authentication and written justification."
+  },
+  {
+    "id": "kb_outcome_genuine",
+    "category": "verification",
+    "roles": [
+      "Public",
+      "Student",
+      "Officer",
+      "Institution"
+    ],
+    "question": "What does 'Verified Genuine' mean in verification?",
+    "synonyms": [
+      "status genuine",
+      "genuine outcome",
+      "valid credential",
+      "verification genuine"
+    ],
+    "file_key": "knowledge: verification.genuine",
+    "answer": "Verified Genuine indicates that the Ed25519 digital seal is authentic, the student's consent grant is active, the credential is not expired or revoked, and all disclosed attributes match cryptographic commitments."
+  },
+  {
+    "id": "kb_outcome_revoked",
+    "category": "verification",
+    "roles": [
+      "Public",
+      "Student",
+      "Officer",
+      "Institution"
+    ],
+    "question": "What does 'Revoked' mean in verification?",
+    "synonyms": [
+      "status revoked",
+      "consent revoked",
+      "revoked outcome",
+      "blocked verification"
+    ],
+    "file_key": "knowledge: verification.revoked",
+    "answer": "Revoked indicates that the student or issuing institution has withdrawn consent for this credential. Under DPDP sovereignty principles, verification is blocked and no data is shared."
+  },
+  {
+    "id": "kb_outcome_expired",
+    "category": "verification",
+    "roles": [
+      "Public",
+      "Student",
+      "Officer",
+      "Institution"
+    ],
+    "question": "What does 'Expired' mean in verification?",
+    "synonyms": [
+      "status expired",
+      "expired validity",
+      "past validity window"
+    ],
+    "file_key": "knowledge: verification.expired",
+    "answer": "Expired indicates that the verification window requested by the student (e.g. 30, 90, or 180 days) has elapsed. The student must generate a refreshed presentation."
+  },
+  {
+    "id": "kb_outcome_tampered",
+    "category": "verification",
+    "roles": [
+      "Public",
+      "Student",
+      "Officer",
+      "Institution"
+    ],
+    "question": "What does 'Tampered' mean in verification?",
+    "synonyms": [
+      "status tampered",
+      "broken signature",
+      "tampered certificate",
+      "signature mismatch"
+    ],
+    "file_key": "knowledge: verification.tampered",
+    "answer": "Tampered indicates that the credential content was illegally altered after signing, causing an Ed25519 signature mismatch or salted commitment mismatch. The document is invalid."
+  },
+  {
+    "id": "kb_outcome_not_found",
+    "category": "verification",
+    "roles": [
+      "Public",
+      "Student",
+      "Officer",
+      "Institution"
+    ],
+    "question": "What does 'Not Found' mean in verification?",
+    "synonyms": [
+      "status not found",
+      "unregistered credential",
+      "unknown credential id"
+    ],
+    "file_key": "knowledge: verification.not_found",
+    "answer": "Not Found indicates that the credential ID is not present in the ApaarTrust registry or was issued by an unrecognized authority."
+  },
+  {
+    "id": "kb_limitation_demo_values",
+    "category": "limitations",
+    "roles": [
+      "Officer",
+      "Institution",
+      "Student",
+      "Public"
+    ],
+    "question": "Are seat caps and quotas official AICTE rules?",
+    "synonyms": [
+      "demo values",
+      "are these aicte rules",
+      "official rules",
+      "aph limits"
+    ],
+    "file_key": "rules/seat_rules.yaml: disclaimer",
+    "answer": "All seat caps, supernumerary limits, and percentages in ApaarTrust are DEMO VALUES for prototype testing, not statutory AICTE rules. Real deployments configure limits from the official AICTE Approval Process Handbook."
+  },
+  {
+    "id": "kb_limitation_synthetic_data",
+    "category": "limitations",
+    "roles": [
+      "Officer",
+      "Institution",
+      "Student",
+      "Public"
+    ],
+    "question": "Is real student data stored in ApaarTrust?",
+    "synonyms": [
+      "synthetic data",
+      "mock students",
+      "real aadhaar",
+      "real apaar"
+    ],
+    "file_key": "knowledge: limitations.synthetic_data",
+    "answer": "ApaarTrust runs exclusively with synthetic, artificially generated demo records. No real student personal identifiable information (PII) or statutory Aadhaar data is stored or processed."
+  },
+  {
+    "id": "kb_limitation_ai_role",
+    "category": "limitations",
+    "roles": [
+      "Officer",
+      "Institution",
+      "Student",
+      "Public"
+    ],
+    "question": "Does the AI assistant make regulatory decisions?",
+    "synonyms": [
+      "ai decision making",
+      "autonomous ai",
+      "ai only advises",
+      "copilot role"
+    ],
+    "file_key": "knowledge: limitations.ai_role",
+    "answer": "The AI Compliance Copilot is strictly assistive: AI only advises, officers decide. It provides plain-language explanations grounded in configured YAML rule files, and never makes autonomous regulatory or disciplinary decisions."
+  },
+  {
+    "id": "kb_limitation_dpdp_wording",
+    "category": "limitations",
+    "roles": [
+      "Officer",
+      "Institution",
+      "Student",
+      "Public"
+    ],
+    "question": "Does ApaarTrust claim legal DPDP compliance?",
+    "synonyms": [
+      "dpdp compliance claim",
+      "legal certification",
+      "dpdp certification"
+    ],
+    "file_key": "knowledge: limitations.dpdp_principles",
+    "answer": "ApaarTrust is designed with DPDP consent and data minimization principles in mind; it does not claim formal legal compliance or statutory government certification."
+  },
+  {
+    "id": "kb_limitation_encryption",
+    "category": "limitations",
+    "roles": [
+      "Officer",
+      "Institution"
+    ],
+    "question": "What encryption algorithm protects APAAR IDs at rest?",
+    "synonyms": [
+      "encryption at rest",
+      "fernet",
+      "aes 128",
+      "aes 256"
+    ],
+    "file_key": "knowledge: limitations.encryption",
+    "answer": "Confidential 12-digit APAAR IDs are encrypted at rest using Fernet (AES-128-CBC with HMAC-SHA256 authenticated encryption), and indexed using one-way HMAC-SHA256 pseudonyms."
+  },
+  {
+    "id": "kb_officer_which_over_intake",
+    "category": "tools",
+    "roles": [
+      "Officer"
+    ],
+    "question": "Which institutions are over intake?",
+    "synonyms": [
+      "which institutions are over intake",
+      "over intake colleges",
+      "breach institutions",
+      "over quota"
+    ],
+    "file_key": "knowledge: tools.over_intake",
+    "answer": "Currently, Bhaskara College of Engineering (1-1090234567) has an over-intake breach: CSE regular admissions (128) exceed the approved sanctioned regular ceiling (120) by 8 students.",
+    "action_url": "#/officer/institutions/1-1090234567",
+    "action_label": "Inspect Bhaskara College"
+  },
+  {
+    "id": "kb_officer_explain_finding",
+    "category": "tools",
+    "roles": [
+      "Officer"
+    ],
+    "question": "Explain this finding",
+    "synonyms": [
+      "explain this finding",
+      "explain finding",
+      "why was this flagged",
+      "finding explanation"
+    ],
+    "file_key": "knowledge: tools.explain_finding",
+    "answer": "Validation findings indicate discrepancies between submitted enrolment data and configured AICTE regulatory rules or central APAAR mock registry records. Inspect the finding drawer to review the plain reason, evidence payload, benign hypothesis, and suggested fix hint.",
+    "action_url": "#/officer/findings",
+    "action_label": "View Findings Inbox"
+  },
+  {
+    "id": "kb_officer_why_duplicate_flagged",
+    "category": "tools",
+    "roles": [
+      "Officer"
+    ],
+    "question": "Why was this duplicate flagged?",
+    "synonyms": [
+      "why was this duplicate flagged",
+      "explain duplicate",
+      "duplicate reason",
+      "collision reason"
+    ],
+    "file_key": "knowledge: tools.why_duplicate",
+    "answer": "Cross-institution duplicate #554433221100 was flagged because matching HMAC-SHA256 tokens and concordant names/DOB indicate concurrent active full-time enrolments at both Aryabhata Institute and Chanakya Technological University for Academic Year 2024-25.",
+    "action_url": "#/officer/duplicates",
+    "action_label": "Compare Duplicate"
+  },
+  {
+    "id": "kb_college_how_to_fix_file",
+    "category": "tools",
+    "roles": [
+      "Institution"
+    ],
+    "question": "How do I fix my file?",
+    "synonyms": [
+      "how do i fix my file",
+      "fix upload errors",
+      "how to resolve errors",
+      "fixing spreadsheet"
+    ],
+    "file_key": "knowledge: tools.fix_file",
+    "answer": "1) Download the Error CSV from your dry-run results or the Submissions page; 2) Review the row numbers and fix hints; 3) Update your local Excel or CSV file; 4) Re-upload via the College Upload Wizard dry-run check.",
+    "action_url": "#/college/upload",
+    "action_label": "Go to Upload Wizard"
+  },
+  {
+    "id": "kb_college_what_is_dry_run",
+    "category": "tools",
+    "roles": [
+      "Institution"
+    ],
+    "question": "What does dry run mean?",
+    "synonyms": [
+      "what does dry run mean",
+      "dry run meaning",
+      "why dry run"
+    ],
+    "file_key": "knowledge: tools.what_is_dry_run",
+    "answer": "Dry run means simulation only: your file is evaluated against all 14 AICTE validation checks without saving any records or altering the official central registry. Nothing is saved until you explicitly review and click Commit in Step 3.",
+    "action_url": "#/college/upload",
+    "action_label": "Try Dry Run"
+  },
+  {
+    "id": "kb_student_who_can_see_my_data",
+    "category": "tools",
+    "roles": [
+      "Student"
+    ],
+    "question": "Who can see my data?",
+    "synonyms": [
+      "who can see my data",
+      "who has access to my data",
+      "data visibility"
+    ],
+    "file_key": "knowledge: tools.who_can_see_my_data",
+    "answer": "Only organizations you explicitly authorize can inspect your data, and only for the specific fields and validity window you selected. Check your 'Who Viewed My Record' access log for an immutable audit of all verification attempts.",
+    "action_url": "#/student/activity",
+    "action_label": "View Access Log"
+  },
+  {
+    "id": "kb_student_how_to_revoke_consent",
+    "category": "tools",
+    "roles": [
+      "Student"
+    ],
+    "question": "How do I revoke consent?",
+    "synonyms": [
+      "how do i revoke consent",
+      "withdraw consent",
+      "cancel consent",
+      "revoke permission"
+    ],
+    "file_key": "knowledge: tools.revoke_consent",
+    "answer": "In the Consent Management Ledger, click 'Revoke Consent' next to any purpose or click 'Revoke All Consent'. The cryptographic grant is immediately terminated; subsequent verification attempts by that verifier will fail with a clear 'Revoked' status.",
+    "action_url": "#/student/consent",
+    "action_label": "Open Consent Ledger"
+  },
+  {
+    "id": "kb_public_how_verification_works",
+    "category": "tools",
+    "roles": [
+      "Public",
+      "Student",
+      "Officer",
+      "Institution"
+    ],
+    "question": "How does verification work?",
+    "synonyms": [
+      "how does verification work",
+      "verification process",
+      "verify steps"
+    ],
+    "file_key": "knowledge: tools.how_verification_works",
+    "answer": "Verification checks three independent layers: 1) Cryptographic validity of the Ed25519 signature seal; 2) Active student consent and validity window; 3) Salted commitment matching for disclosed fields. Withheld fields are never transmitted to the verifier.",
+    "action_url": "#/verify",
+    "action_label": "Open Public Verifier"
+  },
+  {
+    "id": "kb_concept_tamper_demo",
+    "category": "glossary",
+    "roles": [
+      "Officer"
+    ],
+    "question": "What happens during an audit tamper simulation demo?",
+    "synonyms": [
+      "tamper simulation demo",
+      "tamper demo",
+      "illegal mutation demo"
+    ],
+    "file_key": "knowledge: concepts.tamper_demo",
+    "answer": "The tamper simulation demo simulates an unauthorized database intrusion by directly modifying the stored payload of an audit entry. Re-verification immediately recalculates the cryptographic digest, detects a broken SHA-256 parent hash, and triggers a high-severity alert.",
+    "action_url": "#/officer/audit",
+    "action_label": "Try Tamper Demo"
+  },
+  {
+    "id": "kb_concept_restore_chain",
+    "category": "glossary",
+    "roles": [
+      "Officer"
+    ],
+    "question": "How do I restore the audit chain after tampering?",
+    "synonyms": [
+      "restore chain",
+      "recalculate audit hashes",
+      "fix broken audit chain"
+    ],
+    "file_key": "knowledge: concepts.restore_chain",
+    "answer": "Click 'Restore chain' in the Cryptographic Audit Trail page. ApaarTrust sequentially re-calculates all SHA-256 parent-child hashes from genesis to head, anchoring historical continuity.",
+    "action_url": "#/officer/audit",
+    "action_label": "Restore Chain"
+  },
+  {
+    "id": "kb_concept_benign_hypotheses",
+    "category": "glossary",
+    "roles": [
+      "Officer",
+      "Institution"
+    ],
+    "question": "What are benign hypotheses?",
+    "synonyms": [
+      "benign hypotheses",
+      "benign explanation",
+      "administrative delay"
+    ],
+    "file_key": "knowledge: concepts.benign_hypotheses",
+    "answer": "Benign hypotheses are non-malicious operational explanations for flagged discrepancies—such as late student transfer certificates, name changes post-marriage, cultural naming conventions, or delayed state quota allotments."
+  },
+  {
+    "id": "kb_concept_pseudonyms",
+    "category": "glossary",
+    "roles": [
+      "Officer",
+      "Institution",
+      "Student",
+      "Public"
+    ],
+    "question": "Why does ApaarTrust use pseudonyms?",
+    "synonyms": [
+      "pseudonyms",
+      "hmac token",
+      "apaar token",
+      "tokenization"
+    ],
+    "file_key": "knowledge: concepts.pseudonyms",
+    "answer": "To satisfy DPDP data minimization, ApaarTrust indexes records using irreversible HMAC-SHA256 pseudonyms (apaar_token) salted with a server secret. Central databases cannot link student identities without cryptographic authorization."
+  },
+  {
+    "id": "kb_concept_offline_verification",
+    "category": "glossary",
+    "roles": [
+      "Public",
+      "Student",
+      "Officer",
+      "Institution"
+    ],
+    "question": "How does offline verification work without internet?",
+    "synonyms": [
+      "offline verification",
+      "no internet verify",
+      "air gapped verification"
+    ],
+    "file_key": "knowledge: concepts.offline_verification",
+    "answer": "Every verifiable credential presentation packages the issuing institution's public key, the Ed25519 signature, and the disclosure salts. Verifiers can execute cryptographic verification locally on an air-gapped laptop or mobile device without contacting central servers."
+  },
+  {
+    "id": "kb_concept_role_isolation",
+    "category": "glossary",
+    "roles": [
+      "Officer",
+      "Institution",
+      "Student",
+      "Public"
+    ],
+    "question": "Can colleges or students see other users' data?",
+    "synonyms": [
+      "role isolation",
+      "tenant isolation",
+      "data leakage prevention",
+      "security boundary"
+    ],
+    "file_key": "knowledge: concepts.role_isolation",
+    "answer": "No. Strict server-side RBAC and tenant isolation ensure colleges can only access their own student rosters and submissions, students can only see their own credential and consent ledger, and public verifiers only see explicitly consented fields."
+  },
+  {
+    "id": "kb_concept_receipt_hash",
+    "category": "glossary",
+    "roles": [
+      "Institution",
+      "Officer"
+    ],
+    "question": "What is the purpose of the batch submission receipt hash?",
+    "synonyms": [
+      "submission receipt hash",
+      "batch digest",
+      "cryptographic receipt"
+    ],
+    "file_key": "knowledge: concepts.receipt_hash",
+    "answer": "When a college commits an intake batch, a SHA-256 digest is calculated over all normalized student records and anchored into the submission receipt. This provides incontrovertible proof of exact records submitted at that timestamp.",
+    "action_url": "#/college/submissions",
+    "action_label": "View Receipts"
+  },
+  {
+    "id": "kb_concept_search",
+    "category": "glossary",
+    "roles": [
+      "Officer",
+      "Institution",
+      "Student",
+      "Public"
+    ],
+    "question": "How do I use global search in ApaarTrust?",
+    "synonyms": [
+      "global search",
+      "how to search",
+      "search students",
+      "search institutions"
+    ],
+    "file_key": "knowledge: concepts.search",
+    "answer": "Press Ctrl+K (or Cmd+K) to open the Command Palette, or use the search field in the top bar. Search queries are role-scoped: officers can find institutions, students, and findings; colleges search their own student roster."
+  },
+  {
+    "id": "kb_concept_shortcuts",
+    "category": "glossary",
+    "roles": [
+      "Officer",
+      "Institution",
+      "Student",
+      "Public"
+    ],
+    "question": "What keyboard shortcuts are available?",
+    "synonyms": [
+      "keyboard shortcuts",
+      "hotkeys",
+      "shortcuts modal"
+    ],
+    "file_key": "knowledge: concepts.shortcuts",
+    "answer": "Press '?' anywhere to open the Keyboard Shortcuts modal. Shortcuts include: Ctrl/Cmd+K (Command Palette), Ctrl/Cmd+/ (Ask ApaarTrust Copilot), 'g o' (Overview), 'g u' (Upload), 'g f' (Findings), 'g s' (Students/Submissions), and Esc (Close modals/drawers)."
+  },
+  {
+    "id": "kb_concept_role_switch",
+    "category": "glossary",
+    "roles": [
+      "Officer",
+      "Institution",
+      "Student",
+      "Public"
+    ],
+    "question": "How do I switch roles in the demo?",
+    "synonyms": [
+      "switch role",
+      "change persona",
+      "demo role switch"
+    ],
+    "file_key": "knowledge: concepts.role_switch",
+    "answer": "Click the role pill in the top navigation bar or the Demo Controls panel bottom-left to switch between Officer, Institution, Student, and Public Verifier roles. Switching roles generates an authenticated demo session token."
+  },
+  {
+    "id": "kb_concept_mock_registry",
+    "category": "glossary",
+    "roles": [
+      "Officer",
+      "Institution",
+      "Student",
+      "Public"
+    ],
+    "question": "What is the Mock APAAR Central Registry?",
+    "synonyms": [
+      "mock registry",
+      "central apaar registry",
+      "mock citizen"
+    ],
+    "file_key": "knowledge: concepts.mock_registry",
+    "answer": "The Mock APAAR Central Registry simulates the Ministry of Education's national identity database. It validates student names, dates of birth, and genders against pre-seeded citizen identities, and includes an offline down-switch to test registry outages."
+  }
+]

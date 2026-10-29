@@ -1,0 +1,6 @@
+{
+  "valid": true,
+  "total_entries": 11,
+  "broken_at_id": null,
+  "message": "Cryptographic audit chain intact across all 11 events."
+}

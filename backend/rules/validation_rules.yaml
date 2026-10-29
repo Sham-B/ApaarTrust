@@ -1,0 +1,106 @@
+# ApaarTrust - Validation Rules Specification
+version: "1.0.0"
+description: "Rules engine checks for APAAR ID verification, seat compliance, duplicate detection, and anomaly profiling"
+
+rules:
+  APAAR_FORMAT:
+    id: "APAAR_FORMAT"
+    name: "12-Digit APAAR Format Verification"
+    severity: "critical"
+    category: "identity"
+    description: "Validates that the APAAR ID consists of exactly 12 numeric digits without illegal characters"
+
+  REGISTRY_LOOKUP:
+    id: "REGISTRY_LOOKUP"
+    name: "Mock APAAR Central Registry Resolution"
+    severity: "critical"
+    category: "identity"
+    description: "Resolves APAAR ID against Mock APAAR Central Registry; detects not_found, suspended, or source_unavailable"
+
+  REGISTRY_MISMATCH_NAME:
+    id: "REGISTRY_MISMATCH_NAME"
+    name: "Name Concordance vs APAAR Registry"
+    severity: "high"
+    category: "identity"
+    description: "Compares student submitted name against Registry registered name using normalization and RapidFuzz token match"
+    similarity_threshold: 0.82
+
+  REGISTRY_MISMATCH_DOB:
+    id: "REGISTRY_MISMATCH_DOB"
+    name: "DOB Concordance vs APAAR Registry"
+    severity: "high"
+    category: "identity"
+    description: "Verifies date of birth match between uploaded record and central registry identity"
+
+  REGISTRY_CONSENT_MISSING:
+    id: "REGISTRY_CONSENT_MISSING"
+    name: "Citizen Verification Consent Status"
+    severity: "medium"
+    category: "privacy"
+    description: "Checks whether citizen has active digital consent flag on APAAR registry"
+
+  DUPLICATE_IN_BATCH:
+    id: "DUPLICATE_IN_BATCH"
+    name: "Intra-Batch Duplicate Record"
+    severity: "high"
+    category: "duplicate"
+    description: "Flags duplicate student submission within the same institutional upload batch"
+
+  DUPLICATE_CROSS_INSTITUTION:
+    id: "DUPLICATE_CROSS_INSTITUTION"
+    name: "Cross-Institution Duplicate Enrolment"
+    severity: "critical"
+    category: "duplicate"
+    description: "Detects candidate concurrently enrolled at another AICTE-approved institution with overlapping active tenure"
+
+  SEAT_CAP_REGULAR:
+    id: "SEAT_CAP_REGULAR"
+    name: "Sanctioned Regular Intake Ceiling"
+    severity: "high"
+    category: "intake"
+    description: "Flags when regular admitted students exceed the AICTE-approved intake capacity for that academic year"
+
+  SEAT_CAP_SUPERNUMERARY:
+    id: "SEAT_CAP_SUPERNUMERARY"
+    name: "Supernumerary Quota Overflow"
+    severity: "high"
+    category: "intake"
+    description: "Flags when admissions in specific supernumerary categories (TFW, EWS, KM, PMSSS, NRI, FN) exceed configured caps"
+
+  CONSISTENCY_NATIONALITY_QUOTA:
+    id: "CONSISTENCY_NATIONALITY_QUOTA"
+    name: "Nationality and Quota Alignment"
+    severity: "medium"
+    category: "consistency"
+    description: "Checks consistency between declared nationality status and admission quota category"
+
+  CONSISTENCY_AGE_RANGE:
+    id: "CONSISTENCY_AGE_RANGE"
+    name: "Programme Age Band Consistency"
+    severity: "low"
+    category: "consistency"
+    description: "Flags student age at admission falling outside typical range (e.g., < 16 or > 35 for undergraduate)"
+
+  CONSISTENCY_ADMISSION_DATE:
+    id: "CONSISTENCY_ADMISSION_DATE"
+    name: "Academic Year Window Consistency"
+    severity: "medium"
+    category: "consistency"
+    description: "Flags admission dates that fall outside the approved institutional intake window"
+
+  ANOMALY_DOB_CLUSTER:
+    id: "ANOMALY_DOB_CLUSTER"
+    name: "Statistical DOB Clustering Anomaly"
+    severity: "medium"
+    category: "anomaly"
+    description: "Flags statistically unnatural birth date clustering (e.g. excessive concentration on Jan 01)"
+    cluster_date: "01-01"
+    cluster_threshold_pct: 0.15 # > 15% on a single day triggers anomaly review
+
+  ANOMALY_NRI_FN_SPIKE:
+    id: "ANOMALY_NRI_FN_SPIKE"
+    name: "Supernumerary NRI/FN Outlier Distribution"
+    severity: "medium"
+    category: "anomaly"
+    description: "Flags cohort with abnormal proportion of NRI/FN quotas relative to national cohort distributions"
+    nri_fn_ratio_threshold: 0.22 # > 22% of total intake in NRI/FN

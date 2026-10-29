@@ -1,0 +1,148 @@
+{
+  "institution": {
+    "name": "Aryabhata Institute of Technology",
+    "district": "New Delhi",
+    "aicte_pid": "1-1090123456",
+    "contact_email": "registrar@11090123456.edu.in",
+    "id": "1-1090123456",
+    "state": "Delhi",
+    "address": "Mahatma Gandhi Marg, Sector 4, New Delhi - 110001",
+    "created_at": "2026-10-28T06:46:56.012406Z"
+  },
+  "seat_matrices": [
+    {
+      "academic_year": "2024-25",
+      "id": 1,
+      "supernumerary_caps": {
+        "TFW": 6,
+        "EWS": 12,
+        "KM": 3,
+        "PMSSS": 2,
+        "NRI": 6,
+        "FN_OCI": 18
+      },
+      "approved_intake": 120,
+      "institution_id": "1-1090123456",
+      "programme": "B.Tech Computer Science and Engineering",
+      "created_at": "2026-10-28T06:46:56.033155Z"
+    },
+    {
+      "academic_year": "2024-25",
+      "id": 2,
+      "supernumerary_caps": {
+        "TFW": 3,
+        "EWS": 6,
+        "KM": 3,
+        "PMSSS": 2,
+        "NRI": 3,
+        "FN_OCI": 9
+      },
+      "approved_intake": 60,
+      "institution_id": "1-1090123456",
+      "programme": "B.Tech Electronics and Communication Engineering",
+      "created_at": "2026-10-28T06:46:56.033450Z"
+    },
+    {
+      "academic_year": "2024-25",
+      "id": 3,
+      "supernumerary_caps": {
+        "TFW": 3,
+        "EWS": 6,
+        "KM": 3,
+        "PMSSS": 2,
+        "NRI": 3,
+        "FN_OCI": 9
+      },
+      "approved_intake": 60,
+      "institution_id": "1-1090123456",
+      "programme": "B.Tech Mechanical Engineering",
+      "created_at": "2026-10-28T06:46:56.033683Z"
+    }
+  ],
+  "student_count": 242,
+  "findings": [],
+  "submissions": [
+    {
+      "version": 2,
+      "id": "sub_11090123456_v2",
+      "filename": "clean.csv",
+      "valid_rows": 5,
+      "submission_hash": "hash_d4e01a6df9bffcfae374d425e0e34281",
+      "created_at": "2026-10-28T06:46:58.424454Z",
+      "held_by_officer": false,
+      "adverse_reason": null,
+      "action_timestamp": null,
+      "status": "committed",
+      "institution_id": "1-1090123456",
+      "academic_year": "2024-25",
+      "total_rows": 5,
+      "flagged_rows": 0,
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "total_findings": 0,
+        "total_rows": 5,
+        "seat_gauges": [
+          {
+            "programme": "B.Tech Computer Science and Engineering",
+            "approved_intake": 120,
+            "regular_admitted": 2,
+            "regular_overflow": 0,
+            "regular_utilization_pct": 1.7,
+            "supernumerary_caps": {
+              "TFW": 6,
+              "EWS": 12,
+              "KM": 3,
+              "PMSSS": 2,
+              "NRI": 6,
+              "FN_OCI": 18
+            },
+            "quota_counts": {
+              "Regular": 2,
+              "TFW": 1,
+              "EWS": 1,
+              "KM": 1,
+              "PMSSS": 0,
+              "NRI": 0,
+              "FN_OCI": 0,
+              "Other": 0
+            },
+            "supernumerary_violations": [],
+            "total_admitted": 5,
+            "status": "compliant"
+          }
+        ]
+      },
+      "committed_at": "2026-10-28T06:46:58.424454Z",
+      "rejected_by_officer": false,
+      "officer_id": null
+    },
+    {
+      "version": 1,
+      "id": "sub_11090123456_2024_v1",
+      "filename": "1-1090123456_student_intake_2024.xlsx",
+      "valid_rows": 237,
+      "submission_hash": "hash_1-1090123456_v1",
+      "created_at": "2026-10-28T06:46:56.072895Z",
+      "held_by_officer": true,
+      "adverse_reason": "Discrepancy in sanctioned CSE intake ceiling.",
+      "action_timestamp": "2026-10-28T06:46:59.516672Z",
+      "status": "committed",
+      "institution_id": "1-1090123456",
+      "academic_year": "2024-25",
+      "total_rows": 237,
+      "flagged_rows": 0,
+      "counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      },
+      "committed_at": null,
+      "rejected_by_officer": false,
+      "officer_id": "OFFICER_AUTHORIZED"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+name: Build and Test Multi-Arch Container Image
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'backend/**'
+      - 'Dockerfile'
+      - 'requirements-render.txt'
+      - '.github/workflows/image.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+        with:
+          platforms: linux/amd64,linux/arm64
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        if: github.event_name != 'pull_request'
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Derive short SHA
+        id: vars
+        run: echo "short_sha=$(echo ${{ github.sha }} | cut -c1-7)" >> $GITHUB_OUTPUT
+
+      - name: Build and load AMD64 image for smoke test
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          platforms: linux/amd64
+          load: true
+          tags: apaartrust-api:test-amd64
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Smoke Test (AMD64)
+        timeout-minutes: 3
+        run: |
+          echo "Starting AMD64 smoke test container..."
+          docker run -d --name test-api-amd64 -p 7860:7860 -e PORT=7860 -e DEMO_MODE=1 apaartrust-api:test-amd64
+          
+          echo "Waiting for AMD64 /health endpoint..."
+          READY="false"
+          for i in $(seq 1 40); do
+            sleep 2
+            RESP=$(curl -s http://127.0.0.1:7860/health || true)
+            echo "Probe $i: $RESP"
+            if echo "$RESP" | grep -q '"ready":\s*true'; then
+              READY="true"
+              break
+            fi
+          done
+
+          docker logs test-api-amd64
+          docker rm -f test-api-amd64
+
+          if [ "$READY" != "true" ]; then
+            echo "ERROR: AMD64 container failed smoke test (/health ready != true)"
+            exit 1
+          fi
+          echo "✓ AMD64 smoke test passed!"
+
+      - name: Build and load ARM64 image for smoke test
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          platforms: linux/arm64
+          load: true
+          tags: apaartrust-api:test-arm64
+          cache-from: type=gha
+
+      - name: Smoke Test (ARM64 under QEMU)
+        timeout-minutes: 8
+        run: |
+          echo "Starting ARM64 smoke test container under QEMU..."
+          docker run -d --name test-api-arm64 -p 7861:7860 -e PORT=7860 -e DEMO_MODE=1 apaartrust-api:test-arm64
+          
+          echo "Waiting for ARM64 /health endpoint under QEMU emulation (up to 8m timeout)..."
+          READY="false"
+          for i in $(seq 1 80); do
+            sleep 5
+            RESP=$(curl -s http://127.0.0.1:7861/health || true)
+            echo "Probe $i (elapsed ~$((i * 5))s): $RESP"
+            if echo "$RESP" | grep -q '"ready":\s*true'; then
+              READY="true"
+              break
+            fi
+          done
+
+          docker logs test-api-arm64
+          docker rm -f test-api-arm64
+
+          if [ "$READY" != "true" ]; then
+            echo "ERROR: ARM64 container failed smoke test (/health ready != true)"
+            exit 1
+          fi
+          echo "✓ ARM64 smoke test passed under QEMU!"
+
+      - name: Build and push multi-architecture image (amd64,arm64)
+        uses: docker/build-push-action@v5
+        if: github.event_name != 'pull_request'
+        with:
+          context: .
+          file: ./Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            ghcr.io/sham-b/apaartrust-api:latest
+            ghcr.io/sham-b/apaartrust-api:sha-${{ steps.vars.outputs.short_sha }}
+          cache-from: type=gha
+

@@ -1,0 +1,68 @@
+# ApaarTrust - Seat Rules Configuration
+# DEMO VALUES, not AICTE rules; configure from the Approval Process Handbook
+# Markings reference APH (Approval Process Handbook) clause placeholders for prototype demonstration.
+
+programmes:
+  default:
+    min_admission_age: 16
+    max_admission_age: 35
+    valid_admission_window:
+      start_month: 6   # June
+      end_month: 11    # November
+
+seat_quotas:
+  regular:
+    code: "REGULAR"
+    description: "Sanctioned AICTE Intake through state/central counseling or institutional merit"
+    max_percentage_intake: 100
+    is_supernumerary: false
+    citation: "APH §3.2 - Sanctioned Intake Norms (DEMO CONFIGURATION)"
+
+  tfw:
+    code: "TFW"
+    description: "Tuition Fee Waiver Scheme for meritorious economically challenged students"
+    max_percentage_intake: 5 # 5% over sanctioned intake
+    is_supernumerary: true
+    citation: "APH §4.1 - Tuition Fee Waiver Supernumerary Limits (DEMO CONFIGURATION)"
+
+  ews:
+    code: "EWS"
+    description: "Economically Weaker Section reserved supernumerary allocation"
+    max_percentage_intake: 10 # 10% over sanctioned intake
+    is_supernumerary: true
+    citation: "APH §4.2 - EWS Supernumerary Reservation Norms (DEMO CONFIGURATION)"
+
+  km:
+    code: "KM"
+    description: "Kashmiri Migrants and Non-Migrant Kashmiri Hindu Families in Kashmir Valley"
+    max_fixed_seats_per_course: 3
+    is_supernumerary: true
+    citation: "APH §4.3 - Kashmiri Migrant Quota Provisions (DEMO CONFIGURATION)"
+
+  pmsss:
+    code: "PMSSS"
+    description: "Prime Minister Special Scholarship Scheme for UTs of Jammu & Kashmir and Ladakh"
+    max_fixed_seats_per_course: 2
+    is_supernumerary: true
+    citation: "APH §4.4 - PMSSS Special Allotments (DEMO CONFIGURATION)"
+
+  nri:
+    code: "NRI"
+    description: "Non-Resident Indian category admissions"
+    max_percentage_intake: 5 # Up to 5% of sanctioned intake
+    is_supernumerary: true
+    citation: "APH §4.5 - NRI Admission Ceiling (DEMO CONFIGURATION)"
+
+  fn_oci:
+    code: "FN_OCI"
+    description: "Foreign Nationals, Persons of Indian Origin (PIO), and Overseas Citizens of India (OCI)"
+    max_percentage_intake: 15 # Up to 15% supernumerary intake
+    is_supernumerary: true
+    citation: "APH §4.6 - Foreign National & OCI Supernumerary Norms (DEMO CONFIGURATION)"
+
+  lateral_entry:
+    code: "LATERAL_ENTRY"
+    description: "Diploma and B.Sc. lateral entry into 2nd year"
+    max_percentage_intake: 10
+    is_supernumerary: true
+    citation: "APH §4.8 - Lateral Entry Intake Limits (DEMO CONFIGURATION)"

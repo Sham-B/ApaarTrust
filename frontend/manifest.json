@@ -1,0 +1,16 @@
+{
+  "name": "ApaarTrust - Student Data Management & Verification Platform",
+  "short_name": "ApaarTrust",
+  "description": "One ID. Verified students. Zero exposure. Privacy-preserving regulatory scrutiny and verifiable credentials for AICTE-approved institutions.",
+  "start_url": "./#/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#14307a",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

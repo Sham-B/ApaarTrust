@@ -1,0 +1,18 @@
+{
+  "student": {
+    "name": "Rohan Aditya Sharma",
+    "dob": "2004-03-15",
+    "gender": "Male",
+    "social_category": "General",
+    "programme": "B.Tech Computer Science and Engineering",
+    "institution_name": "Aryabhata Institute of Technology",
+    "institution_id": "1-1090123456",
+    "student_id": "AIT-CSE-24-001",
+    "enrolment_status": "Active",
+    "apaar_masked": "XXXX-XXXX-1100",
+    "academic_year": "2024-25",
+    "admission_quota": "Regular"
+  },
+  "credential_id": "cred-demo-aicte-2026",
+  "credential_status": "Active Issued"
+}

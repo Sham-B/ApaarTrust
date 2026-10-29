@@ -1,0 +1,25 @@
+{
+  "status": "genuine",
+  "message": "Cryptographic proof verified! Signature authentic, selective commitments match.",
+  "genuine": true,
+  "issuer": "AICTE-ApaarTrust-Authority",
+  "issued_at": "2026-10-28T06:46:58.264474+00:00",
+  "expires_at": "2027-10-28T06:46:58.264474+00:00",
+  "disclosed_claims": {
+    "name": "Rohan Aditya Sharma",
+    "programme": "B.Tech Computer Science and Engineering"
+  },
+  "disclosed_fields": [
+    "name",
+    "programme"
+  ],
+  "withheld_fields": [
+    "dob",
+    "gender",
+    "institution",
+    "enrolment_status",
+    "academic_year",
+    "student_id"
+  ],
+  "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506"
+}

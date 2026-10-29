@@ -1,0 +1,77 @@
+{
+  "role": "Officer",
+  "persona": {
+    "name": "Ananya Rao",
+    "designation": "Scrutiny Officer",
+    "department": "AICTE Regulation Bureau",
+    "badge": "Central Oversight",
+    "email": "ananya.rao@aicte-india.org",
+    "initials": "AR"
+  },
+  "permissions": [
+    "officer:all",
+    "read:all_institutions",
+    "action:adverse",
+    "view:audit_trail",
+    "view:duplicates",
+    "view:insights",
+    "view:benchmarks",
+    "triage:findings"
+  ],
+  "nav": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "href": "#/officer/overview",
+      "icon": "layout-dashboard"
+    },
+    {
+      "id": "institutions",
+      "title": "Institutions",
+      "href": "#/officer/institutions",
+      "icon": "building-2"
+    },
+    {
+      "id": "findings",
+      "title": "Findings Inbox",
+      "href": "#/officer/findings",
+      "icon": "alert-triangle"
+    },
+    {
+      "id": "duplicates",
+      "title": "Duplicates & Collisions",
+      "href": "#/officer/duplicates",
+      "icon": "copy-check"
+    },
+    {
+      "id": "verifications",
+      "title": "Verification Activity",
+      "href": "#/officer/verifications",
+      "icon": "shield-check"
+    },
+    {
+      "id": "insights",
+      "title": "Insights & Drills",
+      "href": "#/officer/insights",
+      "icon": "line-chart"
+    },
+    {
+      "id": "audit",
+      "title": "Audit Log",
+      "href": "#/officer/audit",
+      "icon": "history"
+    },
+    {
+      "id": "rules",
+      "title": "Rules & Limits",
+      "href": "#/officer/rules",
+      "icon": "book-open"
+    },
+    {
+      "id": "help",
+      "title": "Help & Docs",
+      "href": "#/help",
+      "icon": "help-circle"
+    }
+  ]
+}

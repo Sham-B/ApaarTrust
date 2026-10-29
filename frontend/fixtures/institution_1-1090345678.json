@@ -1,0 +1,125 @@
+{
+  "institution": {
+    "name": "Chanakya Technological University",
+    "district": "Bengaluru",
+    "aicte_pid": "1-1090345678",
+    "contact_email": "registrar@11090345678.edu.in",
+    "id": "1-1090345678",
+    "state": "Karnataka",
+    "address": "Outer Ring Road, Whitefield, Bengaluru, Karnataka - 560066",
+    "created_at": "2026-10-28T06:46:56.018521Z"
+  },
+  "seat_matrices": [
+    {
+      "academic_year": "2024-25",
+      "id": 7,
+      "supernumerary_caps": {
+        "TFW": 6,
+        "EWS": 12,
+        "KM": 3,
+        "PMSSS": 2,
+        "NRI": 6,
+        "FN_OCI": 18
+      },
+      "approved_intake": 120,
+      "institution_id": "1-1090345678",
+      "programme": "B.Tech Computer Science and Engineering",
+      "created_at": "2026-10-28T06:46:56.036425Z"
+    },
+    {
+      "academic_year": "2024-25",
+      "id": 8,
+      "supernumerary_caps": {
+        "TFW": 3,
+        "EWS": 6,
+        "KM": 3,
+        "PMSSS": 2,
+        "NRI": 3,
+        "FN_OCI": 9
+      },
+      "approved_intake": 60,
+      "institution_id": "1-1090345678",
+      "programme": "B.Tech Electronics and Communication Engineering",
+      "created_at": "2026-10-28T06:46:56.036856Z"
+    },
+    {
+      "academic_year": "2024-25",
+      "id": 9,
+      "supernumerary_caps": {
+        "TFW": 3,
+        "EWS": 6,
+        "KM": 3,
+        "PMSSS": 2,
+        "NRI": 3,
+        "FN_OCI": 9
+      },
+      "approved_intake": 60,
+      "institution_id": "1-1090345678",
+      "programme": "B.Tech Mechanical Engineering",
+      "created_at": "2026-10-28T06:46:56.037210Z"
+    }
+  ],
+  "student_count": 210,
+  "findings": [
+    {
+      "student_record_id": null,
+      "id": 3,
+      "rule_id": "DUPLICATE_CROSS_INSTITUTION",
+      "plain_reason": "Student concurrently enrolled at another AICTE-approved institution with overlapping active tenure.",
+      "benign_hypotheses": [
+        {
+          "title": "Pending Transfer Certificate",
+          "description": "Candidate migrated from earlier institution without former college issuing formal online exit slip."
+        },
+        {
+          "title": "Seat Holding During State Counseling",
+          "description": "Candidate secured round 1 seat and upgraded in round 2 without cancellation acknowledgment."
+        }
+      ],
+      "status": "open",
+      "institution_id": "1-1090345678",
+      "row_number": 88,
+      "submission_id": "sub_11090345678_2024_v1",
+      "severity": "critical",
+      "evidence": {
+        "apaar_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+        "apaar_masked": "XXXX-XXXX-1100",
+        "match_score": 10,
+        "conflicting_institution_id": "1-1090123456",
+        "conflicting_institution_name": "Aryabhata Institute of Technology",
+        "conflicting_programme": "B.Tech Computer Science and Engineering",
+        "overlap_academic_year": "2024-25",
+        "evidence_breakdown": "Deterministic match: same HMAC-SHA256 APAAR token (+10.0), matching DOB (+4.1)."
+      },
+      "fix_hint": "Collect stamped Transfer / Migration Certificate from candidate's previous college.",
+      "created_at": "2026-10-28T06:46:57.615277Z"
+    }
+  ],
+  "submissions": [
+    {
+      "version": 1,
+      "id": "sub_11090345678_2024_v1",
+      "filename": "1-1090345678_student_intake_2024.xlsx",
+      "valid_rows": 209,
+      "submission_hash": "hash_1-1090345678_v1",
+      "created_at": "2026-10-28T06:46:57.501872Z",
+      "held_by_officer": false,
+      "adverse_reason": null,
+      "action_timestamp": null,
+      "status": "committed",
+      "institution_id": "1-1090345678",
+      "academic_year": "2024-25",
+      "total_rows": 210,
+      "flagged_rows": 1,
+      "counts": {
+        "critical": 1,
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      },
+      "committed_at": null,
+      "rejected_by_officer": false,
+      "officer_id": null
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+# ApaarTrust - Indian Name Normalization and Phonetic Equivalence Rules
+
+honorifics:
+  - "mr"
+  - "mr."
+  - "ms"
+  - "ms."
+  - "mrs"
+  - "mrs."
+  - "dr"
+  - "dr."
+  - "shri"
+  - "smt"
+  - "smt."
+  - "kumari"
+  - "km"
+  - "km."
+  - "master"
+  - "shaikh"
+  - "sheikh"
+  - "sai"
+  - "sri"
+  - "prof"
+  - "prof."
+
+transliteration_groups:
+  - canonical: "mohammed"
+    variants: ["mohammed", "mohammad", "mohamed", "mohamad", "mohd", "md", "muhammed", "muhammad"]
+
+  - canonical: "lakshmi"
+    variants: ["lakshmi", "laxmi", "luxmi", "laksmi"]
+
+  - canonical: "chaudhary"
+    variants: ["chaudhary", "choudhary", "chaudhari", "choudhry", "chowdhury", "choudhury"]
+
+  - canonical: "mukherjee"
+    variants: ["mukherjee", "mukhopadhyay", "mukherji"]
+
+  - canonical: "chatterjee"
+    variants: ["chatterjee", "chattopadhyay", "chaterjee"]
+
+  - canonical: "banerjee"
+    variants: ["banerjee", "bandyopadhyay", "banerji"]
+
+  - canonical: "verma"
+    variants: ["verma", "varma", "barma"]
+
+  - canonical: "prasad"
+    variants: ["prasad", "prashad", "pershad"]
+
+  - canonical: "yadav"
+    variants: ["yadav", "jadhav", "yadhuv"]
+
+  - canonical: "rao"
+    variants: ["rao", "row", "rau"]
+
+  - canonical: "singh"
+    variants: ["singh", "sing", "sinha"]
+
+  - canonical: "kumar"
+    variants: ["kumar", "kumaar", "koomar"]
+
+  - canonical: "sharma"
+    variants: ["sharma", "sarma", "sharmaa"]
+
+  - canonical: "gupta"
+    variants: ["gupta", "goopta"]
+
+  - canonical: "joshi"
+    variants: ["joshi", "jyoshi"]
+
+  - canonical: "agarwal"
+    variants: ["agarwal", "aggarwal", "agrawal", "aggarwal"]
+
+  - canonical: "reddy"
+    variants: ["reddy", "reddi"]
+
+  - canonical: "nair"
+    variants: ["nair", "nayyar", "nayar"]

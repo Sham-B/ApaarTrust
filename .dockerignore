@@ -1,0 +1,12 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+chrome_tmp*
+chrome_out.html
+scratch/
+.env
+.git
+.github
+data/apaartrust.db*

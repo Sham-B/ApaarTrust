@@ -1,0 +1,1573 @@
+[
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme"
+    ],
+    "timestamp": "2026-10-29T10:13:46.480074Z",
+    "verifier_type": "Sample Genuine Demo",
+    "id": 145,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme"
+    ],
+    "timestamp": "2026-10-29T10:12:59.259058Z",
+    "verifier_type": "Sample Genuine Demo",
+    "id": 144,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme"
+    ],
+    "timestamp": "2026-10-28T17:35:03.118850Z",
+    "verifier_type": "Sample Genuine Demo",
+    "id": 143,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_09338e80",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T06:47:00.399855Z",
+    "verifier_type": "Public Verifier",
+    "id": 142,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_09338e80",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T06:47:00.353808Z",
+    "verifier_type": "Public Verifier",
+    "id": 141,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_09338e80",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T06:47:00.307442Z",
+    "verifier_type": "Public Verifier",
+    "id": 140,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_09338e80",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme"
+    ],
+    "timestamp": "2026-10-28T06:47:00.271204Z",
+    "verifier_type": "Public Verifier",
+    "id": 139,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_3cb1ef90",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T06:47:00.033197Z",
+    "verifier_type": "Employer",
+    "id": 138,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_3cb1ef90",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution"
+    ],
+    "timestamp": "2026-10-28T06:46:59.971277Z",
+    "verifier_type": "Employer",
+    "id": 137,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-28T06:46:47.075909Z",
+    "verifier_type": "Public Verifier",
+    "id": 136,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T06:46:46.040340Z",
+    "verifier_type": "Public Verifier",
+    "id": 135,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T06:46:45.911709Z",
+    "verifier_type": "Test Verifier",
+    "id": 134,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-28T06:46:45.879591Z",
+    "verifier_type": "Test Verifier",
+    "id": 133,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme"
+    ],
+    "timestamp": "2026-10-28T06:44:50.365991Z",
+    "verifier_type": "Sample Genuine Demo",
+    "id": 132,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme"
+    ],
+    "timestamp": "2026-10-28T06:42:14.588661Z",
+    "verifier_type": "Sample Genuine Demo",
+    "id": 131,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_1284007b",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T06:39:10.085655Z",
+    "verifier_type": "Public Verifier",
+    "id": 130,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_1284007b",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T06:39:10.053081Z",
+    "verifier_type": "Public Verifier",
+    "id": 129,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_1284007b",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T06:39:10.003807Z",
+    "verifier_type": "Public Verifier",
+    "id": 128,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_1284007b",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme"
+    ],
+    "timestamp": "2026-10-28T06:39:09.959301Z",
+    "verifier_type": "Public Verifier",
+    "id": 127,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_422b443d",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T06:39:09.761998Z",
+    "verifier_type": "Employer",
+    "id": 126,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_422b443d",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution"
+    ],
+    "timestamp": "2026-10-28T06:39:09.686313Z",
+    "verifier_type": "Employer",
+    "id": 125,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_766e1e07",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T06:38:33.943513Z",
+    "verifier_type": "Public Verifier",
+    "id": 124,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_766e1e07",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T06:38:33.905594Z",
+    "verifier_type": "Public Verifier",
+    "id": 123,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_766e1e07",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T06:38:33.870790Z",
+    "verifier_type": "Public Verifier",
+    "id": 122,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_766e1e07",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme"
+    ],
+    "timestamp": "2026-10-28T06:38:33.837959Z",
+    "verifier_type": "Public Verifier",
+    "id": 121,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_79bea015",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T06:38:33.663585Z",
+    "verifier_type": "Employer",
+    "id": 120,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_79bea015",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution"
+    ],
+    "timestamp": "2026-10-28T06:38:33.585446Z",
+    "verifier_type": "Employer",
+    "id": 119,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_97f731c5",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T06:38:07.102179Z",
+    "verifier_type": "Public Verifier",
+    "id": 118,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_97f731c5",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T06:38:07.070514Z",
+    "verifier_type": "Public Verifier",
+    "id": 117,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_97f731c5",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T06:38:07.039451Z",
+    "verifier_type": "Public Verifier",
+    "id": 116,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_97f731c5",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme"
+    ],
+    "timestamp": "2026-10-28T06:38:07.009383Z",
+    "verifier_type": "Public Verifier",
+    "id": 115,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_f91c6561",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T06:38:06.852772Z",
+    "verifier_type": "Employer",
+    "id": 114,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_f91c6561",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution"
+    ],
+    "timestamp": "2026-10-28T06:38:06.800568Z",
+    "verifier_type": "Employer",
+    "id": 113,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-28T06:37:55.575265Z",
+    "verifier_type": "Public Verifier",
+    "id": 112,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T06:37:54.865441Z",
+    "verifier_type": "Public Verifier",
+    "id": 111,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T06:37:54.725681Z",
+    "verifier_type": "Test Verifier",
+    "id": 110,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-28T06:37:54.690695Z",
+    "verifier_type": "Test Verifier",
+    "id": 109,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme"
+    ],
+    "timestamp": "2026-10-28T01:26:17.755755Z",
+    "verifier_type": "Sample Genuine Demo",
+    "id": 108,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme"
+    ],
+    "timestamp": "2026-10-28T01:24:39.058877Z",
+    "verifier_type": "Sample Genuine Demo",
+    "id": 107,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme"
+    ],
+    "timestamp": "2026-10-28T01:21:22.374588Z",
+    "verifier_type": "Sample Genuine Demo",
+    "id": 106,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme"
+    ],
+    "timestamp": "2026-10-28T01:11:13.607785Z",
+    "verifier_type": "Sample Genuine Demo",
+    "id": 105,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_b6ce5cc6",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T00:52:34.048508Z",
+    "verifier_type": "Public Verifier",
+    "id": 104,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_b6ce5cc6",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T00:52:34.025357Z",
+    "verifier_type": "Public Verifier",
+    "id": 103,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_b6ce5cc6",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T00:52:34.002400Z",
+    "verifier_type": "Public Verifier",
+    "id": 102,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_b6ce5cc6",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme"
+    ],
+    "timestamp": "2026-10-28T00:52:33.979934Z",
+    "verifier_type": "Public Verifier",
+    "id": 101,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_39f74b77",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T00:52:33.872543Z",
+    "verifier_type": "Employer",
+    "id": 100,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_39f74b77",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution"
+    ],
+    "timestamp": "2026-10-28T00:52:33.829918Z",
+    "verifier_type": "Employer",
+    "id": 99,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-28T00:52:25.934106Z",
+    "verifier_type": "Public Verifier",
+    "id": 98,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T00:52:25.500303Z",
+    "verifier_type": "Public Verifier",
+    "id": 97,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T00:52:25.423523Z",
+    "verifier_type": "Test Verifier",
+    "id": 96,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-28T00:52:25.404407Z",
+    "verifier_type": "Test Verifier",
+    "id": 95,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_f67438cb",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T00:48:48.558801Z",
+    "verifier_type": "Public Verifier",
+    "id": 94,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_f67438cb",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T00:48:48.532490Z",
+    "verifier_type": "Public Verifier",
+    "id": 93,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_f67438cb",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T00:48:48.498477Z",
+    "verifier_type": "Public Verifier",
+    "id": 92,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_f67438cb",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme"
+    ],
+    "timestamp": "2026-10-28T00:48:48.469489Z",
+    "verifier_type": "Public Verifier",
+    "id": 91,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_bcff14ab",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T00:48:48.350252Z",
+    "verifier_type": "Employer",
+    "id": 90,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_bcff14ab",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution"
+    ],
+    "timestamp": "2026-10-28T00:48:48.303949Z",
+    "verifier_type": "Employer",
+    "id": 89,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_56e0f800",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T00:00:01.113251Z",
+    "verifier_type": "Public Verifier",
+    "id": 88,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_56e0f800",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T00:00:01.051387Z",
+    "verifier_type": "Public Verifier",
+    "id": 87,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_56e0f800",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T00:00:00.985169Z",
+    "verifier_type": "Public Verifier",
+    "id": 86,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_56e0f800",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme"
+    ],
+    "timestamp": "2026-10-28T00:00:00.913591Z",
+    "verifier_type": "Public Verifier",
+    "id": 85,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_fb6c5397",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-28T00:00:00.635279Z",
+    "verifier_type": "Employer",
+    "id": 84,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_fb6c5397",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution"
+    ],
+    "timestamp": "2026-10-28T00:00:00.322123Z",
+    "verifier_type": "Employer",
+    "id": 83,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_d8166094",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T23:53:48.338426Z",
+    "verifier_type": "Public Verifier",
+    "id": 82,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_d8166094",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T23:53:48.292006Z",
+    "verifier_type": "Public Verifier",
+    "id": 81,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_d8166094",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T23:53:48.240678Z",
+    "verifier_type": "Public Verifier",
+    "id": 80,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_d8166094",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme"
+    ],
+    "timestamp": "2026-10-27T23:53:48.159342Z",
+    "verifier_type": "Public Verifier",
+    "id": 79,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_40361f48",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T23:53:47.623861Z",
+    "verifier_type": "Employer",
+    "id": 78,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_40361f48",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution"
+    ],
+    "timestamp": "2026-10-27T23:53:47.537377Z",
+    "verifier_type": "Employer",
+    "id": 77,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_fbbc5bd2",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T23:52:48.508536Z",
+    "verifier_type": "Public Verifier",
+    "id": 76,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_fbbc5bd2",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T23:52:48.459663Z",
+    "verifier_type": "Public Verifier",
+    "id": 75,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_fbbc5bd2",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T23:52:48.411449Z",
+    "verifier_type": "Public Verifier",
+    "id": 74,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_fbbc5bd2",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme"
+    ],
+    "timestamp": "2026-10-27T23:52:48.363044Z",
+    "verifier_type": "Public Verifier",
+    "id": 73,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_c28d4cf0",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T23:52:48.048253Z",
+    "verifier_type": "Employer",
+    "id": 72,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_c28d4cf0",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution"
+    ],
+    "timestamp": "2026-10-27T23:52:47.948654Z",
+    "verifier_type": "Employer",
+    "id": 71,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_2ed4fe3c",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T23:51:13.237845Z",
+    "verifier_type": "Public Verifier",
+    "id": 70,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_2ed4fe3c",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T23:51:13.189771Z",
+    "verifier_type": "Public Verifier",
+    "id": 69,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_2ed4fe3c",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T23:51:13.150394Z",
+    "verifier_type": "Public Verifier",
+    "id": 68,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_2ed4fe3c",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme"
+    ],
+    "timestamp": "2026-10-27T23:51:13.107904Z",
+    "verifier_type": "Public Verifier",
+    "id": 67,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_09c417a5",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T23:51:12.872705Z",
+    "verifier_type": "Employer",
+    "id": 66,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_09c417a5",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution"
+    ],
+    "timestamp": "2026-10-27T23:51:12.786249Z",
+    "verifier_type": "Employer",
+    "id": 65,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_ef4796ab",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T23:48:00.759332Z",
+    "verifier_type": "Public Verifier",
+    "id": 64,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_ef4796ab",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T23:48:00.711911Z",
+    "verifier_type": "Public Verifier",
+    "id": 63,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_ef4796ab",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T23:48:00.666727Z",
+    "verifier_type": "Public Verifier",
+    "id": 62,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_ef4796ab",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme"
+    ],
+    "timestamp": "2026-10-27T23:48:00.616664Z",
+    "verifier_type": "Public Verifier",
+    "id": 61,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_82fadba4",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme"
+    ],
+    "timestamp": "2026-10-27T23:46:12.681808Z",
+    "verifier_type": "Public Verifier",
+    "id": 60,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred_ait_cse_24_001_82fadba4",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme"
+    ],
+    "timestamp": "2026-10-27T23:46:12.636891Z",
+    "verifier_type": "Public Verifier",
+    "id": 59,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T23:44:14.123464Z",
+    "verifier_type": "Public Verifier",
+    "id": 58,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T23:44:13.523570Z",
+    "verifier_type": "Public Verifier",
+    "id": 57,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T23:44:13.419690Z",
+    "verifier_type": "Test Verifier",
+    "id": 56,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T23:44:13.395270Z",
+    "verifier_type": "Test Verifier",
+    "id": 55,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T16:16:13.566128Z",
+    "verifier_type": "Public Verifier",
+    "id": 54,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T16:16:13.168001Z",
+    "verifier_type": "Public Verifier",
+    "id": 53,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T16:16:13.101989Z",
+    "verifier_type": "Test Verifier",
+    "id": 52,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T16:16:13.082697Z",
+    "verifier_type": "Test Verifier",
+    "id": 51,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T16:13:03.051337Z",
+    "verifier_type": "Public Verifier",
+    "id": 50,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T16:13:02.662996Z",
+    "verifier_type": "Public Verifier",
+    "id": 49,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T16:13:02.585726Z",
+    "verifier_type": "Test Verifier",
+    "id": 48,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T16:13:02.570873Z",
+    "verifier_type": "Test Verifier",
+    "id": 47,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T16:12:10.414237Z",
+    "verifier_type": "Public Verifier",
+    "id": 46,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T16:12:09.689333Z",
+    "verifier_type": "Public Verifier",
+    "id": 45,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T16:12:09.611660Z",
+    "verifier_type": "Test Verifier",
+    "id": 44,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T16:12:09.594528Z",
+    "verifier_type": "Test Verifier",
+    "id": 43,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T16:08:45.271964Z",
+    "verifier_type": "Public Verifier",
+    "id": 42,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T16:08:44.893667Z",
+    "verifier_type": "Public Verifier",
+    "id": 41,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T16:08:44.826577Z",
+    "verifier_type": "Test Verifier",
+    "id": 40,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T16:08:44.813359Z",
+    "verifier_type": "Test Verifier",
+    "id": 39,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T16:04:37.902492Z",
+    "verifier_type": "Public Verifier",
+    "id": 38,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T16:04:37.508323Z",
+    "verifier_type": "Public Verifier",
+    "id": 37,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T16:04:37.425421Z",
+    "verifier_type": "Test Verifier",
+    "id": 36,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T16:04:37.410215Z",
+    "verifier_type": "Test Verifier",
+    "id": 35,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T15:58:51.846052Z",
+    "verifier_type": "Public Verifier",
+    "id": 34,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T15:58:51.448689Z",
+    "verifier_type": "Public Verifier",
+    "id": 33,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T15:58:51.372541Z",
+    "verifier_type": "Test Verifier",
+    "id": 32,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T15:58:51.355916Z",
+    "verifier_type": "Test Verifier",
+    "id": 31,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T15:51:02.293607Z",
+    "verifier_type": "Public Verifier",
+    "id": 30,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T15:51:01.647093Z",
+    "verifier_type": "Public Verifier",
+    "id": 29,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T15:51:01.543326Z",
+    "verifier_type": "Test Verifier",
+    "id": 28,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T15:51:01.516292Z",
+    "verifier_type": "Test Verifier",
+    "id": 27,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T15:41:09.109896Z",
+    "verifier_type": "Public Verifier",
+    "id": 26,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T15:41:08.730810Z",
+    "verifier_type": "Public Verifier",
+    "id": 25,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T15:41:08.657220Z",
+    "verifier_type": "Test Verifier",
+    "id": 24,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T15:41:08.635665Z",
+    "verifier_type": "Test Verifier",
+    "id": 23,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T15:40:32.126808Z",
+    "verifier_type": "Public Verifier",
+    "id": 22,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T15:40:31.659295Z",
+    "verifier_type": "Public Verifier",
+    "id": 21,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T15:40:31.582563Z",
+    "verifier_type": "Test Verifier",
+    "id": 20,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T15:40:31.567669Z",
+    "verifier_type": "Test Verifier",
+    "id": 19,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T15:31:12.949523Z",
+    "verifier_type": "Public Verifier",
+    "id": 18,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T15:31:12.872569Z",
+    "verifier_type": "Test Verifier",
+    "id": 17,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T15:31:12.859219Z",
+    "verifier_type": "Test Verifier",
+    "id": 16,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T09:52:13.177813Z",
+    "verifier_type": "Public Verifier",
+    "id": 15,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T09:52:13.108448Z",
+    "verifier_type": "Test Verifier",
+    "id": 14,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T09:52:13.093994Z",
+    "verifier_type": "Test Verifier",
+    "id": 13,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T09:04:23.180011Z",
+    "verifier_type": "Public Verifier",
+    "id": 12,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T09:04:23.106842Z",
+    "verifier_type": "Test Verifier",
+    "id": 11,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T09:04:23.085467Z",
+    "verifier_type": "Test Verifier",
+    "id": 10,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T09:03:41.703986Z",
+    "verifier_type": "Public Verifier",
+    "id": 9,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T09:03:41.630986Z",
+    "verifier_type": "Test Verifier",
+    "id": 8,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T09:03:41.618818Z",
+    "verifier_type": "Test Verifier",
+    "id": 7,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T09:01:38.972048Z",
+    "verifier_type": "Public Verifier",
+    "id": 6,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T09:01:38.895372Z",
+    "verifier_type": "Test Verifier",
+    "id": 5,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T09:01:38.884175Z",
+    "verifier_type": "Test Verifier",
+    "id": 4,
+    "status": "genuine"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T09:01:12.925870Z",
+    "verifier_type": "Public Verifier",
+    "id": 3,
+    "status": "revoked_consent"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [],
+    "timestamp": "2026-10-27T09:01:12.849087Z",
+    "verifier_type": "Test Verifier",
+    "id": 2,
+    "status": "tampered"
+  },
+  {
+    "credential_id": "cred-demo-aicte-2026",
+    "student_token": "6279cb24d8c254201517a233c5af8cad3a75ce52cda4c3c8afa39eb20bafc506",
+    "fields_disclosed": [
+      "name",
+      "programme",
+      "institution",
+      "enrolment_status"
+    ],
+    "timestamp": "2026-10-27T09:01:12.835302Z",
+    "verifier_type": "Test Verifier",
+    "id": 1,
+    "status": "genuine"
+  }
+]
